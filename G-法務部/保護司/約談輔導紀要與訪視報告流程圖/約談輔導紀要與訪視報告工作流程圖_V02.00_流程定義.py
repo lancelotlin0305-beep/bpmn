@@ -8,7 +8,7 @@ M6-01 語音辨識(STT)、M7-02 Prompt模板(約談輔導紀要、訪視報告�
 執行: python 本檔 [輸出資料夾]
 """
 import io, sys, os, re
-sys.path.insert(0, r"C:\Users\User\.claude\plugins\cache\lancelot-skills\bpmn-flow-builder\20260710.16\skills\bpmn-flow-builder\scripts")
+sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit
 
 VERSION = "V02.00"
@@ -138,6 +138,7 @@ def paint_red(p, vdir, stem):
 
 
 if __name__ == "__main__":
+    from bpmn_builder import _git_mode
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     p = build()
     emit(p, outdir, fmt="drawio", src=__file__,
@@ -146,5 +147,10 @@ if __name__ == "__main__":
                 "補 M7-02 標準Prompt模板註解(約談輔導紀要、訪視報告、風險評估與處遇建議);"
                 "產出任務更名含風險評估",
          change_kind="結構", change_source="口頭指示")
-    paint_red(p, os.path.join(outdir, VERSION), "約談輔導紀要與訪視報告工作流程圖_" + VERSION)
+    # 依 git 版控模式決定 paint_red 讀取路徑:git 模式檔名不帶版號、不進版號子目錄
+    if _git_mode(outdir):
+        vdir, stem = outdir, "約談輔導紀要與訪視報告工作流程圖"
+    else:
+        vdir, stem = os.path.join(outdir, VERSION), "約談輔導紀要與訪視報告工作流程圖_" + VERSION
+    paint_red(p, vdir, stem)
     print("done ->", os.path.abspath(outdir))

@@ -3,7 +3,7 @@
 執行: python3 不起訴書生成工作流程圖_V01.00_流程定義.py [輸出資料夾]
 """
 import sys, os
-sys.path.insert(0, r"C:\Users\User\.claude\plugins\cache\lancelot-skills\bpmn-flow-builder\20260710.16\skills\bpmn-flow-builder\scripts")
+sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit
 
 

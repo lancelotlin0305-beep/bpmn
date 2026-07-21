@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "geo-bpmn-flow-builder@lancelot-skills": true,
+    "geo-rfp-work-breakdown@lancelot-skills": true
+  }
+}

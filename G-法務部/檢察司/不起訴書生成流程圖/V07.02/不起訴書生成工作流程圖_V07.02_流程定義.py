@@ -6,7 +6,7 @@ V07.02:依 RFP 工項拆解-v1(M1 檢察書類初稿生成)補充——
 執行: python 不起訴書生成工作流程圖_V07.02_流程定義.py [輸出資料夾]
 """
 import sys, os
-sys.path.insert(0, r"C:\Users\User\.claude\plugins\cache\lancelot-skills\bpmn-flow-builder\20260710.16\skills\bpmn-flow-builder\scripts")
+sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit_multi
 
 

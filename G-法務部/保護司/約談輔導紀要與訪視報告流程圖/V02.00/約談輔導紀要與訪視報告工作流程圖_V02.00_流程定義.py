@@ -8,7 +8,7 @@ M6-01 語音辨識(STT)、M7-02 Prompt模板(約談輔導紀要、訪視報告�
 執行: python 本檔 [輸出資料夾]
 """
 import io, sys, os, re
-sys.path.insert(0, r"C:\Users\User\.claude\plugins\cache\lancelot-skills\bpmn-flow-builder\20260710.16\skills\bpmn-flow-builder\scripts")
+sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit
 
 VERSION = "V02.00"
