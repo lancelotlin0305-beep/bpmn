@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """檢察官不起訴書生成工作流程圖(多頁):
 頁1 主流程(AI)、頁2 主流程+介接說明、頁3 現行工作流程(未導入AI)
-V09.00:頁3 現行工作流程於「查詢並點開個案」後新增
-  「人工閱讀卷證資料、移送書、偵訊筆錄與警詢筆錄」再開始書寫不起訴書。
-執行: python 不起訴書生成工作流程圖_V09.00_流程定義.py [輸出資料夾]
+V09.01:併入 V07.03 之分區更名——三頁分區「漢書系統」一律改為
+  「書類生成系統-漢書系統」(任務文字維持簡短寫法);
+  V08.00/V09.00 係自 V07.02 分支開發,未帶入該更名,於本版補齊。
+執行: python 不起訴書生成工作流程圖_流程定義.py [輸出資料夾]
 """
 import sys, os
 sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
@@ -16,7 +17,7 @@ def build(prefix, pid, name, with_notes=False):
              bands=[("書類生成系統", [q("s"), q("t0"), q("t1"), q("t1b")]),
                     ("AI智慧輔助系統", [q("t2"), q("t2b"), q("t3"), q("t4"), q("t5"),
                                     q("t5b"), q("t5c"), q("t6"), q("t7"), q("t8")]),
-                    ("漢書系統", [q("t9"), q("e")])])
+                    ("書類生成系統-漢書系統", [q("t9"), q("e")])])
     p.add(q("s"),   "start",   "開始", 0)
     p.add(q("t0"),  "task",    "登錄書類生成系統", 0, kind="user")
     p.add(q("t1"),  "task",    "查詢並點開個案", 0, kind="user")
@@ -68,7 +69,7 @@ def build_cur():
              "檢察官不起訴書生成現行工作流程圖(未導入AI)",
              ["檢察官"],
              bands=[("書類生成系統", ["c_s", "c_t0", "c_t1", "c_t1r"]),
-                    ("漢書系統",     ["c_t2", "c_t3", "c_e"])])
+                    ("書類生成系統-漢書系統", ["c_t2", "c_t3", "c_e"])])
     p.add("c_s",  "start", "開始", 0)
     p.add("c_t0", "task",  "登錄書類生成系統", 0, kind="user")
     p.add("c_t1", "task",  "查詢並點開個案", 0, kind="user")
@@ -95,9 +96,9 @@ if __name__ == "__main__":
                 build("b_", "不起訴書生成工作流程圖_介接說明", "檢察官不起訴書生成工作流程圖(含介接說明)",
                       with_notes=True),
                 build_cur()],
-               "不起訴書生成工作流程圖", outdir, version="V09.00", src=__file__,
-               change="頁3現行工作流程於「查詢並點開個案」後新增「人工閱讀卷證資料、"
-                      "移送書、偵訊筆錄與警詢筆錄」(附移送書/偵訊筆錄/警詢筆錄輸入件)"
-                      "再開始書寫不起訴書",
-               change_kind="結構", change_source="口頭指示")
+               "不起訴書生成工作流程圖", outdir, version="V09.01", src=__file__,
+               change="併入V07.03分區更名:三頁分區「漢書系統」改為「書類生成系統-"
+                      "漢書系統」(V08.00/V09.00自V07.02分支開發未帶入);"
+                      "並改git版控模式產出",
+               change_kind="文字", change_source="口頭指示")
     print("done ->", os.path.abspath(outdir))
