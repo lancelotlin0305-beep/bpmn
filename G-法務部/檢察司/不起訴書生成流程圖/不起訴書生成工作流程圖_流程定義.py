@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """檢察官不起訴書生成工作流程圖(多頁):
-頁1 主流程(AI)、頁2 主流程+介接說明、頁3 現行工作流程(未導入AI)
-V09.01:併入 V07.03 之分區更名——三頁分區「漢書系統」一律改為
-  「書類生成系統-漢書系統」(任務文字維持簡短寫法);
-  V08.00/V09.00 係自 V07.02 分支開發,未帶入該更名,於本版補齊。
+頁1 現行工作流程(未導入AI)、頁2 主流程(AI,含介接說明)
+V10.00:頁序與頁數調整——現行(未導入AI)移至頁1;原頁1(AI主流程)與
+  原頁2(AI主流程+介接說明)整合為單一頁,保留含介接說明版(為前者之超集)。
+V10.01:介接說明備註移除工項編號(RFP工項M1-05/M1-06 前綴),僅留說明文字。
 執行: python 不起訴書生成工作流程圖_流程定義.py [輸出資料夾]
 """
 import sys, os
@@ -48,10 +48,10 @@ def build(prefix, pid, name, with_notes=False):
               "書類生成系統須與AI智慧輔助系統完成帳號驗證,並同時傳遞個案資料與個案案號至AI智慧輔助系統", 0)
         p.assoc(q("n1"), q("t1b"))
         p.add(q("n2"), "note",
-              "RFP工項M1-05:檢視與調整之編修結果應回饋自動Fine-tuning機制,持續優化模型", 0)
+              "檢視與調整之編修結果應回饋自動Fine-tuning機制,持續優化模型", 0)
         p.assoc(q("n2"), q("t8"))
         p.add(q("n3"), "note",
-              "RFP工項M1-06:應以標準化介接直接匯入書類系統(現行人工匯入)", 0)
+              "應以標準化介接直接匯入書類系統(現行人工匯入)", 0)
         p.assoc(q("n3"), q("e"))
 
     p.flow(q("s"), q("t0")); p.flow(q("t0"), q("t1")); p.flow(q("t1"), q("t1b"))
@@ -92,13 +92,10 @@ def build_cur():
 
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
-    emit_multi([build("a_", "不起訴書生成工作流程圖", "檢察官不起訴書生成工作流程圖"),
-                build("b_", "不起訴書生成工作流程圖_介接說明", "檢察官不起訴書生成工作流程圖(含介接說明)",
-                      with_notes=True),
-                build_cur()],
-               "不起訴書生成工作流程圖", outdir, version="V09.01", src=__file__,
-               change="併入V07.03分區更名:三頁分區「漢書系統」改為「書類生成系統-"
-                      "漢書系統」(V08.00/V09.00自V07.02分支開發未帶入);"
-                      "並改git版控模式產出",
+    emit_multi([build_cur(),
+                build("a_", "不起訴書生成工作流程圖", "檢察官不起訴書生成工作流程圖(含介接說明)",
+                      with_notes=True)],
+               "不起訴書生成工作流程圖", outdir, version="V10.01", src=__file__,
+               change="介接說明備註移除工項編號(RFP工項M1-05/M1-06 前綴),僅留說明文字",
                change_kind="文字", change_source="口頭指示")
     print("done ->", os.path.abspath(outdir))
