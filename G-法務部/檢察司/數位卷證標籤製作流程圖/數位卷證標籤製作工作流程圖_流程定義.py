@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """數位卷證標籤製作工作流程圖(多頁):
-頁1 AI智慧輔助系統流程(現況規劃)、頁2 調整方案(待確認)、頁3 現行工作流程(未導入AI)
-V04.00:新增頁2 調整方案——直接下載數位卷證系統已OCR之卷證PDF(免列印重製、
-  免重跑OCR),並於產出帶標籤卷證PDF後回傳數位卷證系統;兩段皆為待確認流程,
+頁1 現行工作流程(未導入AI)、頁2 AI智慧輔助系統流程(現況規劃)、頁3 資安優先方案(待確認)
+V05.00:①頁序調整——現行(未導入AI)提為頁1,AI智慧輔助現況為頁2,資安優先方案為頁3。
+  ②原「調整方案」頁重構為「資安優先方案」:承辦以資安議題為首要考量,卷證PDF不外流,
+  取消「列印下載卷證PDF、匯入AI系統」,改由數位卷證系統直接呼叫AI智慧輔助系統之智慧
+  判斷功能;標籤於系統內產生,做完後回到數位卷證系統人工檢查/調整,免回存;產出之
+  帶標籤卷證PDF雖可下載,惟須以數位金鑰解鎖始可讀檔。介接與金鑰管理為待確認流程,
   以虛線框標示並加註解說明。
 執行: python 數位卷證標籤製作工作流程圖_流程定義.py [輸出資料夾]
 """
@@ -10,7 +13,7 @@ import sys, os
 sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit_multi
 
-VERSION = "V04.00"
+VERSION = "V05.00"
 
 
 def build_ai():
@@ -64,62 +67,60 @@ def build_ai():
 
 
 def build_alt():
-    """頁2:調整方案(待確認)——直接取用已OCR卷證PDF、帶標籤PDF回傳數位卷證系統。"""
+    """頁3:資安優先方案(待確認)——卷證PDF不外流,由數位卷證系統直接呼叫AI,
+    標籤於系統內產生;產出之帶標籤PDF須數位金鑰解鎖讀檔。"""
     p = Proc("數位卷證標籤製作調整方案工作流程圖",
-             "數位卷證標籤製作工作流程圖(調整方案・含待確認流程)",
+             "數位卷證標籤製作工作流程圖(資安優先方案・含待確認流程)",
              ["檢察事務官", "檢察官"], version=VERSION,
              bands=[("數位卷證系統", ["b_s", "b_a1", "b_a2", "b_a3"]),
-                    ("AI智慧輔助系統", ["b_a4", "b_a5b", "b_a5c", "b_a5d",
-                                    "b_a6", "b_a7", "b_gw", "b_a8", "b_a9"]),
-                    ("數位卷證系統(回傳)", ["b_a9b"]),
+                    ("AI智慧輔助系統", ["b_a5b", "b_a5c", "b_a5d", "b_a6"]),
+                    ("數位卷證系統(標籤確認與產出)",
+                                    ["b_a7", "b_gw", "b_a8", "b_a9"]),
                     ("卷證交付", ["b_a10", "b_e"])])
     p.add("b_s",  "start",   "開始", 0)
     p.add("b_a1", "task",    "登入數位卷證系統查詢數位卷證", 0, kind="user")
     p.add("b_a2", "task",    "開啟數位卷證PDF", 0, kind="user")
-    p.add("b_a3", "task",    "直接下載已OCR之卷證PDF檔", 0, kind="user")
-    p.add("b_a4", "task",    "將卷證PDF匯入AI智慧輔助系統", 0, kind="user")
+    p.add("b_a3", "task",    "數位卷證系統呼叫AI智慧輔助系統智慧判斷功能", 0, kind="system")
     p.add("b_a5b","task",    "卷證類型辨識與關鍵資訊擷取", 0, kind="system")
     p.add("b_a5c","task",    "證據標題自動摘要", 0, kind="system")
     p.add("b_a5d","task",    "頁數起迄判讀與分段標記", 0, kind="system")
     p.add("b_a6", "task",    "數位標籤識別與製作", 0, kind="system")
-    p.add("b_a7", "task",    "檢視標籤是否符合需求", 0, kind="user")
+    p.add("b_a7", "task",    "檢查標籤是否符合需求", 0, kind="user")
     p.add("b_gw", "gateway", "符合?", 0)
     p.add("b_a8", "task",    "人工調整標籤", 0, kind="user")
-    p.add("b_a9", "task",    "產出帶標籤之卷證PDF檔", 0, kind="system")
-    p.add("b_a9b","task",    "登入數位卷證系統上傳帶標籤卷證PDF", 0, kind="user")
+    p.add("b_a9", "task",    "產出帶標籤之卷證PDF檔(數位金鑰加密)", 0, kind="system")
     p.add("b_a10","task",    "使用帶標籤卷證PDF辦理案件", 1, kind="user")
     p.add("b_e",  "end",     "結束", 1)
 
-    p.add("b_d1", "output", "已OCR卷證PDF檔", 0)
-    p.add("b_d2", "output", "帶標籤卷證PDF檔", 0)
+    p.add("b_d2", "output", "帶標籤卷證PDF檔(數位金鑰加密)", 0)
     p.add("b_d3", "output", "證據清單", 0)
-    p.assoc("b_a3", "b_d1"); p.assoc("b_a9", "b_d2"); p.assoc("b_a5d", "b_d3")
+    p.assoc("b_a9", "b_d2"); p.assoc("b_a5d", "b_d3")
 
     # ---- 待確認流程:以虛線框(event container)標示 ----
-    p.container("u1", "待確認①", ["b_a3", "b_a4", "b_a5b"], kind="event")
-    p.container("u2", "待確認②", ["b_a9b"], kind="event")
+    p.container("u1", "待確認①", ["b_a3", "b_a5b"], kind="event")
 
-    p.add("bn0", "note", "數位卷證系統原可直接製作標籤,惟因加解密致換頁速度過慢、操作效率不佳,故改採本流程", 0)
-    p.assoc("bn0", "b_a2")
+    p.add("bn0", "note",
+          "承辦以資安議題為首要考量,卷證PDF不外流:免列印下載、免匯入AI系統,"
+          "改由數位卷證系統直接呼叫AI智慧輔助系統之智慧判斷功能;"
+          "標籤於系統內產生,免回存數位卷證系統", 0)
+    p.assoc("bn0", "b_a1")
     p.add("bn1", "note",
-          "【待確認①】數位卷證系統之PDF已完成OCR,若可直接下載,"
-          "即免以列印重製PDF、匯入後亦免重跑OCR辨識,"
-          "可直接做卷證類型辨識與關鍵資訊擷取;可行性待確認", 0)
-    p.assoc("bn1", "b_a5b")
+          "【待確認①】改由數位卷證系統直接介接AI智慧輔助系統(卷證類型辨識與"
+          "關鍵資訊擷取等),卷證PDF全程不下載、不外流;系統介接方式與權限控管待確認", 0)
+    p.assoc("bn1", "b_a3")
     p.add("bn2", "note",
-          "【待確認②】產出帶標籤之卷證PDF後,由檢察事務官自數位卷證系統"
-          "直接上傳回存;上傳介接方式、檔案版本管理與權限控管待確認", 0)
-    p.assoc("bn2", "b_a9b")
+          "【待確認②】標籤於數位卷證系統內產生、免回存;產出之帶標籤卷證PDF雖可下載,"
+          "惟須以數位金鑰解鎖始可讀檔;金鑰管理與下載權限控管待確認", 0)
+    p.assoc("bn2", "b_a9")
 
     p.flow("b_s", "b_a1"); p.flow("b_a1", "b_a2"); p.flow("b_a2", "b_a3")
-    p.flow("b_a3", "b_a4"); p.flow("b_a4", "b_a5b")
+    p.flow("b_a3", "b_a5b")
     p.flow("b_a5b", "b_a5c"); p.flow("b_a5c", "b_a5d"); p.flow("b_a5d", "b_a6")
     p.flow("b_a6", "b_a7"); p.flow("b_a7", "b_gw")
     p.flow("b_gw", "b_a9", "符合→是")
     p.flow("b_gw", "b_a8", "符合→否")
     p.flow("b_a8", "b_a9")
-    p.flow("b_a9", "b_a9b")
-    p.flow("b_a9b", "b_a10")
+    p.flow("b_a9", "b_a10")
     p.flow("b_a10", "b_e")
     return p
 
@@ -153,12 +154,13 @@ def build_cur():
 
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
-    emit_multi([build_ai(), build_alt(), build_cur()],
+    emit_multi([build_cur(), build_ai(), build_alt()],
                "數位卷證標籤製作工作流程圖", outdir, version=VERSION, src=__file__,
-               change="新增頁2「調整方案(待確認)」:直接下載數位卷證系統已OCR之"
-                      "卷證PDF(免列印重製、匯入後免重跑OCR,直接做卷證類型辨識與"
-                      "關鍵資訊擷取);產出帶標籤卷證PDF後新增由檢察事務官自數位"
-                      "卷證系統上傳回存之動作。"
-                      "兩段待確認流程以虛線框標示並加註解",
+               change="①頁序調整:現行(未導入AI)提為頁1、AI智慧輔助現況為頁2、"
+                      "資安優先方案為頁3。②原「調整方案」頁重構為「資安優先方案」:"
+                      "承辦以資安議題為首要考量,卷證PDF不外流,取消列印下載與匯入AI"
+                      "系統,改由數位卷證系統直接呼叫AI智慧輔助系統智慧判斷功能;"
+                      "標籤於系統內產生、免回存;產出之帶標籤卷證PDF須以數位金鑰"
+                      "解鎖讀檔。系統介接與金鑰管理為待確認流程,以虛線框標示並加註解",
                change_kind="結構", change_source="口頭指示")
     print("done ->", os.path.abspath(outdir))
