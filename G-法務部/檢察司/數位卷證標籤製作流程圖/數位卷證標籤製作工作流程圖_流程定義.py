@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 """數位卷證標籤製作工作流程圖(多頁):
-頁1 現行工作流程(未導入AI)、頁2 AI智慧輔助系統流程(現況規劃)、頁3 資安優先方案(待確認)
-V05.00:①頁序調整——現行(未導入AI)提為頁1,AI智慧輔助現況為頁2,資安優先方案為頁3。
-  ②原「調整方案」頁重構為「資安優先方案」:承辦以資安議題為首要考量,卷證PDF不外流,
-  取消「列印下載卷證PDF、匯入AI系統」,改由數位卷證系統直接呼叫AI智慧輔助系統之智慧
-  判斷功能;標籤於系統內產生,做完後回到數位卷證系統人工檢查/調整,免回存;產出之
-  帶標籤卷證PDF雖可下載,惟須以數位金鑰解鎖始可讀檔。介接與金鑰管理為待確認流程,
-  以虛線框標示並加註解說明。
+頁1 現行工作流程(未導入AI)、頁2 AI智慧輔助系統流程(現況規劃)、
+頁3 沿用數位卷證系統OCR・省算力方案、頁4 資安優先方案
+V07.00:頁4資安優先方案之待確認項目均已確認完成,移除全部待確認標示(待確認①虛線框
+  容器、待確認①/②備註),頁名去除「含待確認流程」;並套用使用者手動調整——頁3移除
+  「換頁速度過慢」「不含回傳」兩則備註、頁4精簡資安備註措辭。
 執行: python 數位卷證標籤製作工作流程圖_流程定義.py [輸出資料夾]
 """
 import sys, os
 sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit_multi
 
-VERSION = "V05.00"
+VERSION = "V07.00"
 
 
 def build_ai():
@@ -49,9 +47,9 @@ def build_ai():
     p.assoc("n1", "a2")
     p.add("n2", "note", "目前流程不含將帶標籤卷證回傳數位卷證系統", 1)
     p.assoc("n2", "a10")
-    p.add("n3", "note", "RFP工項M2-01:OCR支援繁中英與PDF/TIFF/JPG,辨識準確率依專家小組會議決議標準;單頁≤5秒、100頁批次≤10分鐘", 0)
+    p.add("n3", "note", "OCR辨識由AI智慧輔助系統執行:支援繁中英與PDF/TIFF/JPG,辨識準確率依專家小組會議決議標準;單頁≤5秒、100頁批次≤10分鐘", 0)
     p.assoc("n3", "a5")
-    p.add("n4", "note", "RFP限制因素(工項M4-03):應具工作階段保留,重新登入可銜接前次作業,免重跑批次辨識", 0)
+    p.add("n4", "note", "應具工作階段保留,重新登入可銜接前次作業,免重跑批次辨識", 0)
     p.assoc("n4", "a4")
 
     p.flow("s", "a1"); p.flow("a1", "a2"); p.flow("a2", "a3")
@@ -66,11 +64,57 @@ def build_ai():
     return p
 
 
+def build_reuse():
+    """頁3:沿用數位卷證系統OCR・省算力方案——數位卷證系統已完成OCR,
+    直接下載加密卷證PDF匯入AI,略過OCR辨識,其餘同頁2。"""
+    p = Proc("數位卷證標籤製作沿用OCR方案工作流程圖",
+             "數位卷證標籤製作工作流程圖(沿用數位卷證系統OCR・省算力方案)",
+             ["檢察事務官", "檢察官"], version=VERSION,
+             bands=[("數位卷證系統", ["r_s", "r_a1", "r_a2", "r_a3"]),
+                    ("AI智慧輔助系統", ["r_a4", "r_a5b", "r_a5c", "r_a5d",
+                                    "r_a6", "r_a7", "r_gw", "r_a8", "r_a9"]),
+                    ("卷證交付", ["r_a10", "r_e"])])
+    p.add("r_s",  "start",   "開始", 0)
+    p.add("r_a1", "task",    "登入數位卷證系統查詢數位卷證", 0, kind="user")
+    p.add("r_a2", "task",    "開啟數位卷證PDF", 0, kind="user")
+    p.add("r_a3", "task",    "直接下載具數位金鑰加密之卷證PDF檔", 0, kind="user")
+    p.add("r_a4", "task",    "將卷證PDF匯入AI智慧輔助系統", 0, kind="user")
+    p.add("r_a5b","task",    "卷證類型辨識與關鍵資訊擷取", 0, kind="system")
+    p.add("r_a5c","task",    "證據標題自動摘要", 0, kind="system")
+    p.add("r_a5d","task",    "頁數起迄判讀與分段標記", 0, kind="system")
+    p.add("r_a6", "task",    "數位標籤識別與製作", 0, kind="system")
+    p.add("r_a7", "task",    "檢視標籤是否符合需求", 0, kind="user")
+    p.add("r_gw", "gateway", "符合?", 0)
+    p.add("r_a8", "task",    "人工調整標籤", 0, kind="user")
+    p.add("r_a9", "task",    "產出帶標籤之卷證PDF檔", 0, kind="system")
+    p.add("r_a10","task",    "使用帶標籤卷證PDF辦理案件", 1, kind="user")
+    p.add("r_e",  "end",     "結束", 1)
+
+    p.add("r_d1", "output", "加密卷證PDF檔", 0)
+    p.add("r_d2", "output", "帶標籤卷證PDF檔", 0)
+    p.add("r_d3", "output", "證據清單", 0)
+    p.assoc("r_a3", "r_d1"); p.assoc("r_a9", "r_d2"); p.assoc("r_a5d", "r_d3")
+
+    p.add("rn2", "note", "數位卷證系統之卷證PDF已完成OCR,為節省算力,匯入後免重跑OCR辨識,直接做卷證類型辨識與關鍵資訊擷取", 0)
+    p.assoc("rn2", "r_a5b")
+
+    p.flow("r_s", "r_a1"); p.flow("r_a1", "r_a2"); p.flow("r_a2", "r_a3")
+    p.flow("r_a3", "r_a4"); p.flow("r_a4", "r_a5b")
+    p.flow("r_a5b", "r_a5c"); p.flow("r_a5c", "r_a5d"); p.flow("r_a5d", "r_a6")
+    p.flow("r_a6", "r_a7"); p.flow("r_a7", "r_gw")
+    p.flow("r_gw", "r_a9", "符合→是")
+    p.flow("r_gw", "r_a8", "符合→否")
+    p.flow("r_a8", "r_a9")
+    p.flow("r_a9", "r_a10")
+    p.flow("r_a10", "r_e")
+    return p
+
+
 def build_alt():
-    """頁3:資安優先方案(待確認)——卷證PDF不外流,由數位卷證系統直接呼叫AI,
-    標籤於系統內產生;產出之帶標籤PDF須數位金鑰解鎖讀檔。"""
+    """頁4:資安優先方案——卷證PDF不外流,由數位卷證系統直接呼叫AI,
+    標籤於系統內產生;產出之帶標籤PDF須數位金鑰解鎖讀檔。(待確認項目已確認、移除)"""
     p = Proc("數位卷證標籤製作調整方案工作流程圖",
-             "數位卷證標籤製作工作流程圖(資安優先方案・含待確認流程)",
+             "數位卷證標籤製作工作流程圖(資安優先方案)",
              ["檢察事務官", "檢察官"], version=VERSION,
              bands=[("數位卷證系統", ["b_s", "b_a1", "b_a2", "b_a3"]),
                     ("AI智慧輔助系統", ["b_a5b", "b_a5c", "b_a5d", "b_a6"]),
@@ -96,22 +140,10 @@ def build_alt():
     p.add("b_d3", "output", "證據清單", 0)
     p.assoc("b_a9", "b_d2"); p.assoc("b_a5d", "b_d3")
 
-    # ---- 待確認流程:以虛線框(event container)標示 ----
-    p.container("u1", "待確認①", ["b_a3", "b_a5b"], kind="event")
-
     p.add("bn0", "note",
-          "承辦以資安議題為首要考量,卷證PDF不外流:免列印下載、免匯入AI系統,"
-          "改由數位卷證系統直接呼叫AI智慧輔助系統之智慧判斷功能;"
-          "標籤於系統內產生,免回存數位卷證系統", 0)
+          "以資安議題為首要考量,卷證PDF不外流:由數位卷證系統直接呼叫AI智慧輔助"
+          "系統之智慧判斷功能;標籤於系統內產生,免回存數位卷證系統", 0)
     p.assoc("bn0", "b_a1")
-    p.add("bn1", "note",
-          "【待確認①】改由數位卷證系統直接介接AI智慧輔助系統(卷證類型辨識與"
-          "關鍵資訊擷取等),卷證PDF全程不下載、不外流;系統介接方式與權限控管待確認", 0)
-    p.assoc("bn1", "b_a3")
-    p.add("bn2", "note",
-          "【待確認②】標籤於數位卷證系統內產生、免回存;產出之帶標籤卷證PDF雖可下載,"
-          "惟須以數位金鑰解鎖始可讀檔;金鑰管理與下載權限控管待確認", 0)
-    p.assoc("bn2", "b_a9")
 
     p.flow("b_s", "b_a1"); p.flow("b_a1", "b_a2"); p.flow("b_a2", "b_a3")
     p.flow("b_a3", "b_a5b")
@@ -154,13 +186,11 @@ def build_cur():
 
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
-    emit_multi([build_cur(), build_ai(), build_alt()],
+    emit_multi([build_cur(), build_ai(), build_reuse(), build_alt()],
                "數位卷證標籤製作工作流程圖", outdir, version=VERSION, src=__file__,
-               change="①頁序調整:現行(未導入AI)提為頁1、AI智慧輔助現況為頁2、"
-                      "資安優先方案為頁3。②原「調整方案」頁重構為「資安優先方案」:"
-                      "承辦以資安議題為首要考量,卷證PDF不外流,取消列印下載與匯入AI"
-                      "系統,改由數位卷證系統直接呼叫AI智慧輔助系統智慧判斷功能;"
-                      "標籤於系統內產生、免回存;產出之帶標籤卷證PDF須以數位金鑰"
-                      "解鎖讀檔。系統介接與金鑰管理為待確認流程,以虛線框標示並加註解",
-               change_kind="結構", change_source="口頭指示")
+               change="頁4資安優先方案之待確認項目均已確認完成,移除全部待確認標示"
+                      "(待確認①虛線框容器、待確認①/②備註),頁名去除「含待確認流程」;"
+                      "並套用使用者手動調整——頁3移除「換頁速度過慢」「不含回傳」兩則"
+                      "備註、頁4精簡資安備註措辭",
+               change_kind="結構", change_source="使用者修改 .drawio")
     print("done ->", os.path.abspath(outdir))
