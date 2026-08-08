@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """統計標籤判斷工作流程圖(多頁):頁1 偵查類(含介接說明)、頁2 執行類(含介接說明)
-V10.00:4頁併為2頁——
-  將原獨立的兩頁介接說明併入偵查類/執行類主流程頁(介接註解直接掛在對應任務),
-  刪除獨立介接說明兩頁;介接註解移除RFP工項編號,僅保留「RFP工項」字樣;
-  流程末端閘道「符合?」改為「引用?」,分支改為 引用→是 / 引用→否。
+V11.00:執行類重構——
+  觸發點由「AI每日排程」改為「使用者於案件管理系統執行分案」:分案時傳送
+  執行案號+確認案號+被告姓名+身分證號給AI智慧輔助系統;AI依確認案號更新確認號,
+  至司法院裁判書系統撈取裁判書並判讀七項欄位;新增閘道「上訴駁回?」——
+  是:取原案(上一審)確認案號重查裁判書(迴圈);否:以確認案號+被告姓名取得欄位、
+  整理判讀結果;最後以執行案號+被告姓名+身分證號回傳,呼叫刑案管理系統API存暫存。
+  新增第三道泳道「案件管理系統」;刑案管理系統後段(登入→查詢→AI引用→引用?)沿用。
 執行: python 統計標籤判斷_流程定義.py [輸出資料夾]
 """
 import sys, os
@@ -60,52 +63,59 @@ def build_pretrial():
 
 
 def build_execution():
-    """頁2:執行類(觸發點=AI智慧輔助系統每日排程撈取司法院新增裁判書)。"""
+    """頁2:執行類(觸發點=使用者於案件管理系統執行「分案」,傳案號/被告資訊給AI撈取判讀裁判書)。"""
     p = Proc("統計標籤判斷_執行類_工作流程圖", "統計標籤判斷(執行類)工作流程圖",
-             ["刑案管理系統使用者"],
-             bands=[("AI智慧輔助系統", ["b_s", "b_1", "b_2", "b_3"]),
-                    ("刑案管理系統", ["b_sftp", "b_4", "b_5", "b_6", "b_7",
-                                      "b_8", "b_gw", "b_9", "b_e", "b_n1"])])
-    p.add("b_s",   "timer",   "每日排程", 0)
-    p.add("b_1",   "task",    "至司法院裁判書系統撈取新增裁判書", 0, kind="system")
-    p.add("b_2",   "task",    "AI智慧輔助系統判讀裁判書七項欄位", 0, kind="system")
-    p.add("b_3",   "task",    "整理判讀結果並呼叫刑案管理系統API存入暫存檔", 0, kind="system")
-    p.add("b_sftp","database","刑案管理系統暫存區", 0)
-    p.add("b_4",   "task",    "登入刑案管理系統", 0, kind="user")
-    p.add("b_5",   "task",    "進入執行類案件查詢個案", 0, kind="user")
-    p.add("b_6",   "task",    "點選「AI引用」按鈕", 0, kind="user")
-    p.add("b_7",   "task",    "自暫存區讀取AI判讀結果", 0, kind="system")
-    p.add("b_8",   "task",    "檢視判讀資料是否符合需求", 0, kind="user")
-    p.add("b_gw",  "gateway", "引用?", 0)
-    p.add("b_9",   "task",    "點選引用,欄位資訊存入刑案管理系統", 0, kind="user")
-    p.add("b_e",   "end",     "結束", 0)
+             ["案件管理系統使用者", "AI智慧輔助系統", "刑案管理系統使用者"])
+    p.add("b_s",   "start",   "開始", 0)
+    p.add("b_1",   "task",    "執行分案", 0, kind="user")
+    p.add("b_2",   "task",    "傳送執行案號、確認案號、被告姓名、身分證號至AI智慧輔助系統", 0, kind="system")
+    p.add("b_4",   "task",    "依確認案號至司法院裁判書系統查詢下載裁判書", 1, kind="system")
+    p.add("b_5",   "task",    "AI判讀裁判書七項欄位", 1, kind="system")
+    p.add("b_gw1", "gateway", "駁回?", 1)
+    p.add("b_6",   "task",    "取原案(上一審)確認案號,重查取得上一審裁判書", 1, kind="system")
+    p.add("b_7",   "task",    "以確認案號+被告姓名取得相關欄位資訊,整理判讀結果", 1, kind="system")
+    p.add("b_8",   "task",    "以執行案號+被告姓名+身分證號回傳,呼叫刑案管理系統API存入暫存檔", 1, kind="system")
+    p.add("b_sftp","database","刑案管理系統暫存區", 2)
+    p.add("b_9",   "task",    "登入刑案管理系統", 2, kind="user")
+    p.add("b_10",  "task",    "進入執行類案件查詢個案", 2, kind="user")
+    p.add("b_11",  "task",    "點選「AI引用」按鈕", 2, kind="user")
+    p.add("b_12",  "task",    "自暫存區讀取AI判讀結果", 2, kind="system")
+    p.add("b_13",  "task",    "檢視判讀資料是否符合需求", 2, kind="user")
+    p.add("b_gw2", "gateway", "引用?", 2)
+    p.add("b_14",  "task",    "點選引用,欄位資訊存入刑案管理系統", 2, kind="user")
+    p.add("b_e",   "end",     "結束", 2)
 
-    p.add("b_d1", "input",  "新增裁判書", 0)
-    p.add("b_d2", "output", "欄位判讀結果", 0)
-    p.add("b_n1", "note",   "引用→否時:後續由統計處收集不符資訊,回饋進行判讀邏輯調整", 0, 13)
-    p.assoc("b_d1", "b_1"); p.assoc("b_3", "b_d2"); p.assoc("b_n1", ("b_gw", "b_e"))
+    p.add("b_d1", "input",  "司法院裁判書", 1)
+    p.add("b_d2", "output", "欄位判讀結果", 1)
+    p.assoc("b_d1", "b_4"); p.assoc("b_7", "b_d2")
 
+    p.add("b_n2", "note",
+          "使用者於案件管理系統執行分案時,將執行案號、確認案號、被告姓名、身分證號傳給AI智慧輔助系統作為撈取判讀依據", 0)
     p.add("b_n3", "note",
-          "AI智慧輔助系統判讀完個案欄位屬性後,直接呼叫刑案管理系統API將判讀結果寫入暫存區;使用者於刑案管理系統點選AI引用時,由系統自暫存區讀取(RFP工項要求API整合)", 0)
-    p.add("b_n4", "note",
-          "RFP工項:裁判書API判讀七項欄位(正確率80%)", 0)
-    p.assoc("b_n3", "b_3"); p.assoc("b_n4", "b_1")
+          "AI判讀完個案欄位屬性後,以執行案號+被告姓名+身分證號呼叫刑案管理系統API將判讀結果寫入暫存區;使用者點選AI引用時由系統自暫存區讀取(RFP工項要求API整合);引用→否時由統計處收集不符資訊,回饋進行判讀邏輯調整", 1)
+    p.add("b_n5", "note",
+          "RFP工項:裁判書API判讀七項欄位(正確率80%);駁回?→是取原案(上一審)確認案號重查上一審裁判書,→否即有裁判結果以此版本分辨", 1)
+    p.assoc("b_n2", "b_2"); p.assoc("b_n3", "b_8"); p.assoc("b_n5", "b_5")
 
-    p.flow("b_s", "b_1"); p.flow("b_1", "b_2"); p.flow("b_2", "b_3")
-    p.flow("b_3", "b_sftp"); p.flow("b_sftp", "b_4"); p.flow("b_4", "b_5")
-    p.flow("b_5", "b_6"); p.flow("b_6", "b_7"); p.flow("b_7", "b_8")
-    p.flow("b_8", "b_gw")
-    p.flow("b_gw", "b_9", "引用→是")
-    p.flow("b_gw", "b_e", "引用→否")
-    p.flow("b_9", "b_e")
+    p.flow("b_s", "b_1"); p.flow("b_1", "b_2"); p.flow("b_2", "b_4")
+    p.flow("b_4", "b_5"); p.flow("b_5", "b_gw1")
+    p.flow("b_gw1", "b_6", "上訴駁回→是")
+    p.flow("b_6", "b_4", "重查")
+    p.flow("b_gw1", "b_7", "上訴駁回→否")
+    p.flow("b_7", "b_8"); p.flow("b_8", "b_sftp")
+    p.flow("b_sftp", "b_9"); p.flow("b_9", "b_10"); p.flow("b_10", "b_11")
+    p.flow("b_11", "b_12"); p.flow("b_12", "b_13"); p.flow("b_13", "b_gw2")
+    p.flow("b_gw2", "b_14", "引用→是")
+    p.flow("b_gw2", "b_e", "引用→否")
+    p.flow("b_14", "b_e")
     return p
 
 
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_pretrial(), build_execution()], "統計標籤判斷",
-               outdir, version="V10.00", src=__file__,
-               change="4頁併為2頁:介接說明併入偵查類/執行類主流程頁,刪除獨立介接說明兩頁;註解移除RFP工項編號(僅留「RFP工項」);閘道「符合?」改為「引用?」、分支改引用→是/引用→否",
+               outdir, version="V11.00", src=__file__,
+               change="執行類重構:觸發改為使用者於案件管理系統執行「分案」,傳執行案號+確認案號+被告姓名+身分證號給AI;AI依確認案號更新確認號→撈司法院裁判書→判讀七項欄位→閘道「上訴駁回?」(是:取原案上一審確認案號重查迴圈/否:以確認案號+姓名取欄位)→以執行案號+姓名+身分證號回傳存暫存;新增第三道泳道「案件管理系統」,取代原每日排程觸發",
                change_kind="結構", change_source="口頭指示")
 
     # ---- 後處理:跨系統自動介接連線標紅(builder 不支援線色,於輸出檔後製) ----
@@ -114,12 +124,12 @@ if __name__ == "__main__":
     RED = "#FF0000"
     # git 版控模式:輸出不建版號子目錄、檔名不帶版號
     GIT = _git_mode(outdir)
-    SUF = "" if GIT else "_V10.00"
-    vdir = outdir if GIT else os.path.join(outdir, "V10.00")
+    SUF = "" if GIT else "_V11.00"
+    vdir = outdir if GIT else os.path.join(outdir, "V11.00")
     red_edges = {  # pid → [(source, target, flow定義順序索引)]
         "統計標籤判斷_偵查類_工作流程圖": [("a_2b", "a_sftpin", 3), ("a_sftpin", "a_3", 4),
                                           ("a_5", "a_sftp", 7)],
-        "統計標籤判斷_執行類_工作流程圖": [("b_3", "b_sftp", 3)],
+        "統計標籤判斷_執行類_工作流程圖": [("b_2", "b_4", 2), ("b_8", "b_sftp", 9)],
     }
 
     # 1) .drawio:依 source/target 精準改 style(順序流原色 #3a4a59)
@@ -135,7 +145,7 @@ if __name__ == "__main__":
                             + m.group(3), t)
             n += k
     io.open(dpath, "w", encoding="utf-8").write(t)
-    print("drawio 標紅連線:", n, "(預期 4)")
+    print("drawio 標紅連線:", n, "(預期 5)")
 
     # 2) .svg:順序流 path 無 id,依 flow() 定義順序取第 idx 條;箭頭改紅色 marker
     FLOW_TAG = re.compile(r'<path d="([^"]+)" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url\(#(arr)\)"\s*/>')
