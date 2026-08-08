@@ -39,13 +39,13 @@
 <path d="M745,1872 L745,1933" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <rect x="721.0" y="1883" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
 <text x="755.0" y="1898" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">引用→是</text>
-<path d="M771,1846 L840,1846 L840,2086 L764,2086" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<rect x="781.85" y="1827.0" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
-<text x="815.85" y="1842.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">引用→否</text>
+<path d="M719,1846 L644,1846 L644,2086 L726,2086" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="636.25" y="1827.0" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
+<text x="670.25" y="1842.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">引用→否</text>
 <path d="M745,1999 L745,2067" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M494,526 L364,526" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <path d="M364,1006 L494,1006" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M825,2206 L821,2206 L821,2086" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M665,2206 L664,2206 L664,2086" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <path d="M515,456 L515,469 L299,469 L299,493" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <path d="M515,950 L515,962 L299,962 L299,973" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <circle cx="285.0" cy="166.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
