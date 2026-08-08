@@ -4,3 +4,7 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# draw.io 開啟時的暫存/備份鎖檔
+.$*.drawio.bkp
+.$*.bkp
