@@ -245,7 +245,7 @@
           <mxGeometry x="719" y="740" width="52" height="52" as="geometry"/>
         </mxCell>
         <mxCell id="b_6" value="取原案(上一審)確認案號,重查取得上一審裁判書" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="666" y="1213" width="158" height="66" as="geometry"/>
+          <mxGeometry x="666" y="1093" width="158" height="66" as="geometry"/>
         </mxCell>
         <mxCell id="b_7" value="以確認案號+被告姓名取得相關欄位資訊,整理判讀結果" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="666" y="853" width="158" height="66" as="geometry"/>
@@ -254,7 +254,7 @@
           <mxGeometry x="666" y="973" width="158" height="66" as="geometry"/>
         </mxCell>
         <mxCell id="b_sftp" value="刑案管理系統暫存區" style="shape=datastore;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
-          <mxGeometry x="1292" y="1221" width="56" height="50" as="geometry"/>
+          <mxGeometry x="1292" y="1101" width="56" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="b_9" value="登入刑案管理系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="1241" y="1333" width="158" height="66" as="geometry"/>
@@ -328,11 +328,11 @@
         <mxCell id="dio_id_d19771__f_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_5" target="b_gw1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_d19771__f_6" value="上訴駁回→是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_gw1" target="b_6">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1076" y="766"/><mxPoint x="1076" y="1246"/></Array></mxGeometry>
+        <mxCell id="dio_id_d19771__f_6" value="上訴駁回→是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_gw1" target="b_6">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="610" y="766"/><mxPoint x="610" y="1126"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_id_d19771__f_7" value="重查" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_6" target="b_4">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="184" y="1246"/><mxPoint x="184" y="526"/></Array></mxGeometry>
+        <mxCell id="dio_id_d19771__f_7" value="重查" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.682;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_6" target="b_4">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="586" y="1138"/><mxPoint x="586" y="526"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_id_d19771__f_8" value="上訴駁回→否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_gw1" target="b_7">
           <mxGeometry relative="1" as="geometry"/>
@@ -341,7 +341,7 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="dio_id_d19771__f_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_8" target="b_sftp">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1447" y="1006"/><mxPoint x="1447" y="1246"/></Array></mxGeometry>
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1447" y="1006"/><mxPoint x="1447" y="1126"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_id_d19771__f_11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_sftp" target="b_9">
           <mxGeometry relative="1" as="geometry"/>

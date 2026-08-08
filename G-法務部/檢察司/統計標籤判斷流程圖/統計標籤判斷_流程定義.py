@@ -99,8 +99,10 @@ def build_execution():
 
     p.flow("b_s", "b_1"); p.flow("b_1", "b_2"); p.flow("b_2", "b_4")
     p.flow("b_4", "b_5"); p.flow("b_5", "b_gw1")
-    p.flow("b_gw1", "b_6", "上訴駁回→是")
-    p.flow("b_6", "b_4", "重查")
+    # 駁回→是 與 重查 兩條迴圈相關線都走左側 backLoop 通道:引擎 _assign_backloop_tracks
+    # 會自動把兩條回線分兩軌(相距 2×LINE_GAP)平行排列,避免是-分支繞右、兩線重合
+    p.flow("b_gw1", "b_6", "上訴駁回→是", route="backLoop")
+    p.flow("b_6", "b_4", "重查", route="backLoop")
     p.flow("b_gw1", "b_7", "上訴駁回→否")
     p.flow("b_7", "b_8"); p.flow("b_8", "b_sftp")
     p.flow("b_sftp", "b_9"); p.flow("b_9", "b_10"); p.flow("b_10", "b_11")
