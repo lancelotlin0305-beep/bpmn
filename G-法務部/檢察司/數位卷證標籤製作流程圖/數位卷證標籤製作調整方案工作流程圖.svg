@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-383 7 1996 1803" data-pad="capped" font-family="Microsoft JhengHei, PingFang TC, Noto Sans CJK TC, sans-serif">
-<rect x="-383" y="7" width="1996" height="1803" fill="#ffffff"/>
-<text x="140" y="50" font-size="19" font-weight="bold" fill="#1f2d3d">數位卷證標籤製作工作流程圖(資安優先方案) V07.00</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-383 7 1996 1923" data-pad="capped" font-family="Microsoft JhengHei, PingFang TC, Noto Sans CJK TC, sans-serif">
+<rect x="-383" y="7" width="1996" height="1923" fill="#ffffff"/>
+<text x="140" y="50" font-size="19" font-weight="bold" fill="#1f2d3d">數位卷證標籤製作工作流程圖(資安優先方案) V08.00</text>
 <defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#5a6b7b"/></marker><marker id="mfarr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#6b7b8b" stroke-width="1.3"/></marker><marker id="mfdot" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth"><circle cx="5" cy="5" r="3.2" fill="#fff" stroke="#6b7b8b" stroke-width="1.3"/></marker></defs>
-<rect x="170" y="106" width="920" height="480" fill="#f2f8f2" fill-opacity="0.55" stroke="none"/>
-<line x1="170" y1="586" x2="1090" y2="586" stroke="#6f9f78" stroke-width="1.2" stroke-dasharray="7 5"/>
-<rect x="170" y="586" width="920" height="480" fill="#f6f4fb" fill-opacity="0.55" stroke="none"/>
-<line x1="170" y1="1066" x2="1090" y2="1066" stroke="#8a7fb8" stroke-width="1.2" stroke-dasharray="7 5"/>
-<rect x="170" y="1066" width="920" height="480" fill="#fdf6ec" fill-opacity="0.55" stroke="none"/>
-<line x1="170" y1="1546" x2="1090" y2="1546" stroke="#c2955a" stroke-width="1.2" stroke-dasharray="7 5"/>
-<rect x="170" y="1546" width="920" height="240" fill="#eef6fa" fill-opacity="0.55" stroke="none"/>
-<line x1="170" y1="1786" x2="1090" y2="1786" stroke="#5a8fb0" stroke-width="1.2" stroke-dasharray="7 5"/>
-<rect x="140" y="70" width="950" height="1716" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
+<rect x="170" y="106" width="920" height="360" fill="#f2f8f2" fill-opacity="0.55" stroke="none"/>
+<line x1="170" y1="466" x2="1090" y2="466" stroke="#6f9f78" stroke-width="1.2" stroke-dasharray="7 5"/>
+<rect x="170" y="466" width="920" height="720" fill="#f6f4fb" fill-opacity="0.55" stroke="none"/>
+<line x1="170" y1="1186" x2="1090" y2="1186" stroke="#8a7fb8" stroke-width="1.2" stroke-dasharray="7 5"/>
+<rect x="170" y="1186" width="920" height="480" fill="#fdf6ec" fill-opacity="0.55" stroke="none"/>
+<line x1="170" y1="1666" x2="1090" y2="1666" stroke="#c2955a" stroke-width="1.2" stroke-dasharray="7 5"/>
+<rect x="170" y="1666" width="920" height="240" fill="#eef6fa" fill-opacity="0.55" stroke="none"/>
+<line x1="170" y1="1906" x2="1090" y2="1906" stroke="#5a8fb0" stroke-width="1.2" stroke-dasharray="7 5"/>
+<rect x="140" y="70" width="950" height="1836" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
 <rect x="140" y="70" width="30" height="36" fill="#eef2f6" stroke="#cdd6df"/>
-<rect x="140" y="106" width="30" height="480" fill="#f2f8f2" stroke="#6f9f78" stroke-width="1"/>
-<text x="159.0" y="346.0" font-size="12.5" font-weight="bold" fill="#6f9f78" text-anchor="middle" transform="rotate(-90 159.0 346.0)">數位卷證系統</text>
-<rect x="140" y="586" width="30" height="480" fill="#f6f4fb" stroke="#8a7fb8" stroke-width="1"/>
+<rect x="140" y="106" width="30" height="360" fill="#f2f8f2" stroke="#6f9f78" stroke-width="1"/>
+<text x="159.0" y="286.0" font-size="12.5" font-weight="bold" fill="#6f9f78" text-anchor="middle" transform="rotate(-90 159.0 286.0)">數位卷證系統</text>
+<rect x="140" y="466" width="30" height="720" fill="#f6f4fb" stroke="#8a7fb8" stroke-width="1"/>
 <text x="159.0" y="826.0" font-size="12.5" font-weight="bold" fill="#8a7fb8" text-anchor="middle" transform="rotate(-90 159.0 826.0)">AI智慧輔助系統</text>
-<rect x="140" y="1066" width="30" height="480" fill="#fdf6ec" stroke="#c2955a" stroke-width="1"/>
-<text x="159.0" y="1306.0" font-size="12.5" font-weight="bold" fill="#c2955a" text-anchor="middle" transform="rotate(-90 159.0 1306.0)">數位卷證系統(標籤確認與產出)</text>
-<rect x="140" y="1546" width="30" height="240" fill="#eef6fa" stroke="#5a8fb0" stroke-width="1"/>
-<text x="159.0" y="1666.0" font-size="12.5" font-weight="bold" fill="#5a8fb0" text-anchor="middle" transform="rotate(-90 159.0 1666.0)">卷證交付</text>
-<rect x="170" y="70" width="460" height="1716" fill="none" stroke="#cdd6df"/>
+<rect x="140" y="1186" width="30" height="480" fill="#fdf6ec" stroke="#c2955a" stroke-width="1"/>
+<text x="159.0" y="1426.0" font-size="12.5" font-weight="bold" fill="#c2955a" text-anchor="middle" transform="rotate(-90 159.0 1426.0)">數位卷證系統(標籤確認與存檔)</text>
+<rect x="140" y="1666" width="30" height="240" fill="#eef6fa" stroke="#5a8fb0" stroke-width="1"/>
+<text x="159.0" y="1786.0" font-size="12.5" font-weight="bold" fill="#5a8fb0" text-anchor="middle" transform="rotate(-90 159.0 1786.0)">卷證交付</text>
+<rect x="170" y="70" width="460" height="1836" fill="none" stroke="#cdd6df"/>
 <rect x="170" y="70" width="460" height="36" fill="#eef2f6" stroke="#cdd6df"/>
 <text x="400.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">檢察事務官</text>
-<rect x="630" y="70" width="460" height="1716" fill="none" stroke="#cdd6df"/>
+<rect x="630" y="70" width="460" height="1836" fill="none" stroke="#cdd6df"/>
 <rect x="630" y="70" width="460" height="36" fill="#eef2f6" stroke="#cdd6df"/>
 <text x="860.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">檢察官</text>
 <path d="M285,185 L285,253" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
@@ -34,35 +34,35 @@
 <path d="M285,799 L285,853" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M285,919 L285,973" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M285,1039 L285,1093" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M285,1159 L285,1220" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M259,1246 L184,1246 L184,1486 L206,1486" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<rect x="176.25" y="1227.0" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
-<text x="210.25" y="1242.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">符合→是</text>
-<path d="M285,1272 L285,1333" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<rect x="261.0" y="1283" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
-<text x="295.0" y="1298" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">符合→否</text>
-<path d="M285,1399 L285,1453" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M285,1519 L285,1606 L781,1606" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M860,1639 L860,1707" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M364,1486 L494,1486" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M285,1159 L285,1213" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M285,1279 L285,1340" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M259,1366 L184,1366 L184,1606 L206,1606" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="176.25" y="1347.0" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
+<text x="210.25" y="1362.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">符合→是</text>
+<path d="M285,1392 L285,1453" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="261.0" y="1403" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
+<text x="295.0" y="1418" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">符合→否</text>
+<path d="M285,1519 L285,1573" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M285,1639 L285,1726 L781,1726" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M860,1759 L860,1827" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M364,886 L494,886" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <path d="M435,286 L364,286" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <circle cx="285.0" cy="166.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
 <text x="285.0" y="197" font-size="11.5" fill="#2a3a49" text-anchor="middle">開始</text>
-<rect x="206" y="253" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="218" cy="263" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M213,272 Q218,266 223,272" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="285.0" y="282.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">登入數位卷證系統查詢數</text>
-<text x="285.0" y="297.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">位卷證</text>
-<rect x="206" y="373" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="218" cy="383" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M213,392 Q218,386 223,392" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="285.0" y="410.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">開啟數位卷證PDF</text>
+<rect x="206" y="253" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="218" cy="264" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M218,264 l6.5,0.0 M218,264 l-6.5,0.0 M218,264 l0.0,6.5 M218,264 l0.0,-6.5 M218,264 l4.5954999999999995,4.5954999999999995 M218,264 l-4.5954999999999995,4.5954999999999995 M218,264 l4.5954999999999995,-4.5954999999999995 M218,264 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="285.0" y="282.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">取得新上傳之數位卷證P</text>
+<text x="285.0" y="297.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">DF</text>
+<rect x="206" y="373" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="218" cy="384" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M218,384 l6.5,0.0 M218,384 l-6.5,0.0 M218,384 l0.0,6.5 M218,384 l0.0,-6.5 M218,384 l4.5954999999999995,4.5954999999999995 M218,384 l-4.5954999999999995,4.5954999999999995 M218,384 l4.5954999999999995,-4.5954999999999995 M218,384 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="285.0" y="402.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">將卷證PDF傳送至AI</text>
+<text x="285.0" y="417.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">智慧輔助系統</text>
 <rect x="206" y="493" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
 <circle cx="218" cy="504" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
 <path d="M218,504 l6.5,0.0 M218,504 l-6.5,0.0 M218,504 l0.0,6.5 M218,504 l0.0,-6.5 M218,504 l4.5954999999999995,4.5954999999999995 M218,504 l-4.5954999999999995,4.5954999999999995 M218,504 l4.5954999999999995,-4.5954999999999995 M218,504 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="285.0" y="522.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">數位卷證系統呼叫AI智</text>
-<text x="285.0" y="537.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">慧輔助系統智慧判斷功能</text>
+<text x="285.0" y="530.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">執行OCR辨識</text>
 <rect x="206" y="613" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
 <circle cx="218" cy="624" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
 <path d="M218,624 l6.5,0.0 M218,624 l-6.5,0.0 M218,624 l0.0,6.5 M218,624 l0.0,-6.5 M218,624 l4.5954999999999995,4.5954999999999995 M218,624 l-4.5954999999999995,4.5954999999999995 M218,624 l4.5954999999999995,-4.5954999999999995 M218,624 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
@@ -80,43 +80,46 @@
 <circle cx="218" cy="984" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
 <path d="M218,984 l6.5,0.0 M218,984 l-6.5,0.0 M218,984 l0.0,6.5 M218,984 l0.0,-6.5 M218,984 l4.5954999999999995,4.5954999999999995 M218,984 l-4.5954999999999995,4.5954999999999995 M218,984 l4.5954999999999995,-4.5954999999999995 M218,984 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
 <text x="285.0" y="1010.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">數位標籤識別與製作</text>
-<rect x="206" y="1093" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="218" cy="1103" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M213,1112 Q218,1106 223,1112" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="285.0" y="1130.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">檢查標籤是否符合需求</text>
-<polygon points="285.0,1220 311,1246.0 285.0,1272 259,1246.0" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.6"/>
-<text x="285.0" y="1250.0" font-size="11" fill="#1f2d3d" text-anchor="middle">符合?</text>
-<rect x="206" y="1333" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="218" cy="1343" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M213,1352 Q218,1346 223,1352" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="285.0" y="1370.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">人工調整標籤</text>
-<rect x="206" y="1453" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<circle cx="218" cy="1464" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
-<path d="M218,1464 l6.5,0.0 M218,1464 l-6.5,0.0 M218,1464 l0.0,6.5 M218,1464 l0.0,-6.5 M218,1464 l4.5954999999999995,4.5954999999999995 M218,1464 l-4.5954999999999995,4.5954999999999995 M218,1464 l4.5954999999999995,-4.5954999999999995 M218,1464 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="285.0" y="1482.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">產出帶標籤之卷證PDF</text>
-<text x="285.0" y="1497.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">檔(數位金鑰加密)</text>
-<rect x="781" y="1573" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="793" cy="1583" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M788,1592 Q793,1586 798,1592" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="860.0" y="1602.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">使用帶標籤卷證PDF辦</text>
-<text x="860.0" y="1617.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">理案件</text>
-<circle cx="860.0" cy="1726.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
-<text x="860.0" y="1757" font-size="11.5" fill="#2a3a49" text-anchor="middle">結束</text>
-<path d="M494,1460 L526,1460 L536,1470 L536,1512 L494,1512 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M526,1460 L526,1470 L536,1470" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M501,1473 L511,1473 L511,1469 L518,1475 L511,1481 L511,1477 L501,1477 Z" fill="#5a6b7b" stroke="#5a6b7b" stroke-width="1.2"/>
-<text x="515.0" y="1524" font-size="11.5" fill="#2a3a49" text-anchor="middle">帶標籤卷證P</text>
-<text x="515.0" y="1537" font-size="11.5" fill="#2a3a49" text-anchor="middle">DF檔(數位</text>
-<text x="515.0" y="1550" font-size="11.5" fill="#2a3a49" text-anchor="middle">金鑰加密)</text>
+<rect x="206" y="1093" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="218" cy="1104" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M218,1104 l6.5,0.0 M218,1104 l-6.5,0.0 M218,1104 l0.0,6.5 M218,1104 l0.0,-6.5 M218,1104 l4.5954999999999995,4.5954999999999995 M218,1104 l-4.5954999999999995,4.5954999999999995 M218,1104 l4.5954999999999995,-4.5954999999999995 M218,1104 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="285.0" y="1122.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">將標籤識別結果回傳數位</text>
+<text x="285.0" y="1137.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">卷證系統</text>
+<rect x="206" y="1213" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="218" cy="1223" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M213,1232 Q218,1226 223,1232" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="285.0" y="1250.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">檢視標籤是否符合需求</text>
+<polygon points="285.0,1340 311,1366.0 285.0,1392 259,1366.0" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.6"/>
+<text x="285.0" y="1370.0" font-size="11" fill="#1f2d3d" text-anchor="middle">符合?</text>
+<rect x="206" y="1453" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="218" cy="1463" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M213,1472 Q218,1466 223,1472" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="285.0" y="1490.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">人工調整標籤</text>
+<rect x="206" y="1573" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="218" cy="1584" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M218,1584 l6.5,0.0 M218,1584 l-6.5,0.0 M218,1584 l0.0,6.5 M218,1584 l0.0,-6.5 M218,1584 l4.5954999999999995,4.5954999999999995 M218,1584 l-4.5954999999999995,4.5954999999999995 M218,1584 l4.5954999999999995,-4.5954999999999995 M218,1584 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="285.0" y="1602.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">於數位卷證系統將檔案存</text>
+<text x="285.0" y="1617.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">檔</text>
+<rect x="781" y="1693" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="793" cy="1703" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M788,1712 Q793,1706 798,1712" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="860.0" y="1730.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">於數位卷證系統下載卷證</text>
+<circle cx="860.0" cy="1846.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
+<text x="860.0" y="1877" font-size="11.5" fill="#2a3a49" text-anchor="middle">結束</text>
 <path d="M494,860 L526,860 L536,870 L536,912 L494,912 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
 <path d="M526,860 L526,870 L536,870" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
 <path d="M501,873 L511,873 L511,869 L518,875 L511,881 L511,877 L501,877 Z" fill="#5a6b7b" stroke="#5a6b7b" stroke-width="1.2"/>
 <text x="515.0" y="924" font-size="11.5" fill="#2a3a49" text-anchor="middle">證據清單</text>
-<path d="M447,236 L435,236 L435,336 L447,336" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<text x="451" y="255.0" font-size="11.5" fill="#3a4a59">以資安議題為首要考量,</text>
-<text x="451" y="269.0" font-size="11.5" fill="#3a4a59">卷證PDF不外流:由數</text>
-<text x="451" y="283.0" font-size="11.5" fill="#3a4a59">位卷證系統直接呼叫AI</text>
-<text x="451" y="297.0" font-size="11.5" fill="#3a4a59">智慧輔助系統之智慧判斷</text>
-<text x="451" y="311.0" font-size="11.5" fill="#3a4a59">功能;標籤於系統內產生</text>
-<text x="451" y="325.0" font-size="11.5" fill="#3a4a59">,免回存數位卷證系統</text>
+<path d="M447,201 L435,201 L435,371 L447,371" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<text x="451" y="220.0" font-size="11.5" fill="#3a4a59">前段全自動、無人工介入</text>
+<text x="451" y="234.0" font-size="11.5" fill="#3a4a59">:當其他使用者上傳數位</text>
+<text x="451" y="248.0" font-size="11.5" fill="#3a4a59">卷證,數位卷證系統取得</text>
+<text x="451" y="262.0" font-size="11.5" fill="#3a4a59">新卷證時即自動將PDF</text>
+<text x="451" y="276.0" font-size="11.5" fill="#3a4a59">送AI智慧輔助系統進行</text>
+<text x="451" y="290.0" font-size="11.5" fill="#3a4a59">OCR與標籤識別;結果</text>
+<text x="451" y="304.0" font-size="11.5" fill="#3a4a59">回傳後標籤直接回存數位</text>
+<text x="451" y="318.0" font-size="11.5" fill="#3a4a59">卷證系統,不另產出外部</text>
+<text x="451" y="332.0" font-size="11.5" fill="#3a4a59">帶標籤PDF檔;卷證由</text>
+<text x="451" y="346.0" font-size="11.5" fill="#3a4a59">檢察官於數位卷證系統內</text>
+<text x="451" y="360.0" font-size="11.5" fill="#3a4a59">下載</text>
 </svg>

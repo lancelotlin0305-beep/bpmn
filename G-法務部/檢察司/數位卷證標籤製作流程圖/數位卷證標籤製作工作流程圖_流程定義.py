@@ -2,6 +2,10 @@
 """數位卷證標籤製作工作流程圖(多頁):
 頁1 現行工作流程(未導入AI)、頁2 AI智慧輔助系統流程(現況規劃)、
 頁3 沿用數位卷證系統OCR・省算力方案、頁4 資安優先方案
+V08.00:頁4資安優先方案重構——數位卷證系統初步取得數位卷證後,將卷證PDF傳送AI智慧
+  輔助系統進行OCR與標籤識別;AI識別完回傳數位卷證系統,由檢察事務官於系統內檢視標籤
+  是否符合、不符則人工調整;不再另產出帶標籤卷證PDF檔,直接於數位卷證系統存檔;另由
+  檢察官於數位卷證系統執行下載。
 V07.00:頁4資安優先方案之待確認項目均已確認完成,移除全部待確認標示(待確認①虛線框
   容器、待確認①/②備註),頁名去除「含待確認流程」;並套用使用者手動調整——頁3移除
   「換頁速度過慢」「不含回傳」兩則備註、頁4精簡資安備註措辭。
@@ -11,7 +15,7 @@ import sys, os
 sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit_multi
 
-VERSION = "V07.00"
+VERSION = "V08.00"
 
 
 def build_ai():
@@ -111,49 +115,55 @@ def build_reuse():
 
 
 def build_alt():
-    """頁4:資安優先方案——卷證PDF不外流,由數位卷證系統直接呼叫AI,
-    標籤於系統內產生;產出之帶標籤PDF須數位金鑰解鎖讀檔。(待確認項目已確認、移除)"""
+    """頁4:資安優先方案(V08.00 重構)——數位卷證系統初步取得數位卷證後,將卷證PDF
+    傳AI進行OCR與標籤識別;AI回傳後由檢察事務官於系統內檢視、不符則人工調整;不另產出
+    帶標籤PDF,直接於數位卷證系統存檔;另由檢察官於數位卷證系統下載。"""
     p = Proc("數位卷證標籤製作調整方案工作流程圖",
              "數位卷證標籤製作工作流程圖(資安優先方案)",
              ["檢察事務官", "檢察官"], version=VERSION,
-             bands=[("數位卷證系統", ["b_s", "b_a1", "b_a2", "b_a3"]),
-                    ("AI智慧輔助系統", ["b_a5b", "b_a5c", "b_a5d", "b_a6"]),
-                    ("數位卷證系統(標籤確認與產出)",
-                                    ["b_a7", "b_gw", "b_a8", "b_a9"]),
-                    ("卷證交付", ["b_a10", "b_e"])])
+             bands=[("數位卷證系統", ["b_s", "b_a1", "b_a3"]),
+                    ("AI智慧輔助系統", ["b_ocr", "b_a5b", "b_a5c", "b_a5d",
+                                    "b_a6", "b_ret"]),
+                    ("數位卷證系統(標籤確認與存檔)",
+                                    ["b_a7", "b_gw", "b_a8", "b_save"]),
+                    ("卷證交付", ["b_dl", "b_e"])])
     p.add("b_s",  "start",   "開始", 0)
-    p.add("b_a1", "task",    "登入數位卷證系統查詢數位卷證", 0, kind="user")
-    p.add("b_a2", "task",    "開啟數位卷證PDF", 0, kind="user")
-    p.add("b_a3", "task",    "數位卷證系統呼叫AI智慧輔助系統智慧判斷功能", 0, kind="system")
+    p.add("b_a1", "task",    "取得新上傳之數位卷證PDF", 0, kind="system")
+    p.add("b_a3", "task",    "將卷證PDF傳送至AI智慧輔助系統", 0, kind="system")
+    p.add("b_ocr","task",    "執行OCR辨識", 0, kind="system")
     p.add("b_a5b","task",    "卷證類型辨識與關鍵資訊擷取", 0, kind="system")
     p.add("b_a5c","task",    "證據標題自動摘要", 0, kind="system")
     p.add("b_a5d","task",    "頁數起迄判讀與分段標記", 0, kind="system")
     p.add("b_a6", "task",    "數位標籤識別與製作", 0, kind="system")
-    p.add("b_a7", "task",    "檢查標籤是否符合需求", 0, kind="user")
+    p.add("b_ret","task",    "將標籤識別結果回傳數位卷證系統", 0, kind="system")
+    p.add("b_a7", "task",    "檢視標籤是否符合需求", 0, kind="user")
     p.add("b_gw", "gateway", "符合?", 0)
     p.add("b_a8", "task",    "人工調整標籤", 0, kind="user")
-    p.add("b_a9", "task",    "產出帶標籤之卷證PDF檔(數位金鑰加密)", 0, kind="system")
-    p.add("b_a10","task",    "使用帶標籤卷證PDF辦理案件", 1, kind="user")
+    p.add("b_save","task",   "於數位卷證系統將檔案存檔", 0, kind="system")
+    p.add("b_dl", "task",    "於數位卷證系統下載卷證", 1, kind="user")
     p.add("b_e",  "end",     "結束", 1)
 
-    p.add("b_d2", "output", "帶標籤卷證PDF檔(數位金鑰加密)", 0)
     p.add("b_d3", "output", "證據清單", 0)
-    p.assoc("b_a9", "b_d2"); p.assoc("b_a5d", "b_d3")
+    p.assoc("b_a5d", "b_d3")
 
     p.add("bn0", "note",
-          "以資安議題為首要考量,卷證PDF不外流:由數位卷證系統直接呼叫AI智慧輔助"
-          "系統之智慧判斷功能;標籤於系統內產生,免回存數位卷證系統", 0)
+          "前段全自動、無人工介入:當其他使用者上傳數位卷證,數位卷證系統取得新卷證時"
+          "即自動將PDF送AI智慧輔助系統進行OCR與標籤識別;結果回傳後標籤直接回存數位"
+          "卷證系統,不另產出外部帶標籤PDF檔;卷證由檢察官於數位卷證系統內下載", 0)
     p.assoc("bn0", "b_a1")
 
-    p.flow("b_s", "b_a1"); p.flow("b_a1", "b_a2"); p.flow("b_a2", "b_a3")
-    p.flow("b_a3", "b_a5b")
+    p.flow("b_s", "b_a1"); p.flow("b_a1", "b_a3")
+    p.flow("b_a3", "b_ocr"); p.flow("b_ocr", "b_a5b")
     p.flow("b_a5b", "b_a5c"); p.flow("b_a5c", "b_a5d"); p.flow("b_a5d", "b_a6")
-    p.flow("b_a6", "b_a7"); p.flow("b_a7", "b_gw")
-    p.flow("b_gw", "b_a9", "符合→是")
+    p.flow("b_a6", "b_ret"); p.flow("b_ret", "b_a7"); p.flow("b_a7", "b_gw")
+    p.flow("b_gw", "b_save", "符合→是")
     p.flow("b_gw", "b_a8", "符合→否")
-    p.flow("b_a8", "b_a9")
-    p.flow("b_a9", "b_a10")
-    p.flow("b_a10", "b_e")
+    p.flow("b_a8", "b_save")
+    p.flow("b_save", "b_dl")
+    p.flow("b_dl", "b_e")
+    # 單欄直下(避免多節點觸發蛇行/子欄交替):採傳統分層,每前向邊降列
+    from bpmn_builder import auto_layout
+    auto_layout(p, compact=False)
     return p
 
 
@@ -188,9 +198,9 @@ if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_cur(), build_ai(), build_reuse(), build_alt()],
                "數位卷證標籤製作工作流程圖", outdir, version=VERSION, src=__file__,
-               change="頁4資安優先方案之待確認項目均已確認完成,移除全部待確認標示"
-                      "(待確認①虛線框容器、待確認①/②備註),頁名去除「含待確認流程」;"
-                      "並套用使用者手動調整——頁3移除「換頁速度過慢」「不含回傳」兩則"
-                      "備註、頁4精簡資安備註措辭",
-               change_kind="結構", change_source="使用者修改 .drawio")
+               change="頁4資安優先方案重構:數位卷證系統初步取得數位卷證後將卷證PDF"
+                      "傳AI進行OCR與標籤識別,AI回傳數位卷證系統;由檢察事務官於系統內"
+                      "檢視標籤是否符合、不符則人工調整;不再另產出帶標籤卷證PDF檔,"
+                      "直接於數位卷證系統存檔;另由檢察官於數位卷證系統執行下載",
+               change_kind="結構", change_source="口頭指示")
     print("done ->", os.path.abspath(outdir))
