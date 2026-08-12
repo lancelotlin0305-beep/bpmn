@@ -5,7 +5,7 @@
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="dio_title" value="統計標籤判斷(偵查類)工作流程圖 V14.00" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
+        <mxCell id="dio_title" value="統計標籤判斷(偵查類)工作流程圖 V15.00" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
           <mxGeometry x="140" y="22" width="410" height="28" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
@@ -50,7 +50,7 @@
         <mxCell id="dio_lane_2_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
           <mxGeometry x="1330" y="70" width="460" height="2316" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_2_0" value="系統" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+        <mxCell id="dio_lanehdr_2_0" value="SFTP" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
           <mxGeometry x="1330" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_3" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
@@ -122,14 +122,17 @@
         <mxCell id="a_n3__tx" value="AI智慧輔助系統判讀完個案欄位屬性後,直接呼叫刑案管理系統API將判讀結果寫入暫存區;使用者於刑案管理系統點選AI引用時,由系統自暫存區讀取(RFP工項要求API整合)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" vertex="1" parent="1">
           <mxGeometry x="1033" y="942" width="142" height="128" as="geometry"/>
         </mxCell>
-        <mxCell id="a_brs" value="每日排程" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=timer;fillColor=#ffffff;strokeColor=#5a6b7b;strokeWidth=1.8;" vertex="1" parent="1">
-          <mxGeometry x="1541" y="867" width="38" height="38" as="geometry"/>
+        <mxCell id="a_dls" value="每日排程" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=timer;fillColor=#ffffff;strokeColor=#5a6b7b;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="846" y="267" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="a_br1" value="維護部頒代碼表與法條對照表並置於SFTP" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1481" y="973" width="158" height="66" as="geometry"/>
+        <mxCell id="a_dl" value="至大腦SFTP下載部頒代碼表與法條對照表" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="373" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="a_bre" value="完成" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
-          <mxGeometry x="1541" y="1107" width="38" height="38" as="geometry"/>
+        <mxCell id="a_dle" value="完成" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
+          <mxGeometry x="846" y="507" width="38" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="a_brdb" value="部頒代碼表、法條對照表" style="shape=datastore;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="1532" y="381" width="56" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="a_cs" value="AI判讀結果已寫入暫存區" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" vertex="1" parent="1">
           <mxGeometry x="2006" y="1347" width="38" height="38" as="geometry"/>
@@ -191,10 +194,10 @@
         <mxCell id="dio_pre_pB__f_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_5" target="a_ae2">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pre_pBr__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_brs" target="a_br1">
+        <mxCell id="dio_pre_pB__f_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_dls" target="a_dl">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pre_pBr__f_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_br1" target="a_bre">
+        <mxCell id="dio_pre_pB__f_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_dl" target="a_dle">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pre_pC__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_cs" target="a_6">
@@ -230,8 +233,8 @@
         <mxCell id="dio_mf_2" value="判讀結果寫入刑案管理系統暫存區" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_ae2" target="a_cs">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1445" y="1246"/><mxPoint x="1445" y="1366"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_mf_3" value="部頒代碼表、法條對照表(每日SFTP批次下載)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_br1" target="a_4">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1212" y="1006"/><mxPoint x="1212" y="1006"/></Array></mxGeometry>
+        <mxCell id="dio_mf_3" value="部頒代碼表、法條對照表" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_brdb" target="a_dl">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1238" y="406"/><mxPoint x="1238" y="406"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_pre_pA__as_1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_d1" target="a_2b">
           <mxGeometry relative="1" as="geometry"/>
@@ -256,7 +259,7 @@
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="dio_title" value="統計標籤判斷(執行類)工作流程圖 V14.00" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
+        <mxCell id="dio_title" value="統計標籤判斷(執行類)工作流程圖 V15.00" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
           <mxGeometry x="140" y="22" width="410" height="28" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
@@ -301,7 +304,7 @@
         <mxCell id="dio_lane_2_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
           <mxGeometry x="1330" y="70" width="460" height="2436" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_2_0" value="系統" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+        <mxCell id="dio_lanehdr_2_0" value="SFTP" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
           <mxGeometry x="1330" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_3" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
@@ -385,14 +388,17 @@
         <mxCell id="b_n3__tx" value="AI判讀完個案欄位屬性後,以執行案號+被告姓名+身分證號呼叫刑案管理系統API將判讀結果寫入暫存區;使用者點選AI引用時由系統自暫存區讀取(RFP工項要求API整合)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" vertex="1" parent="1">
           <mxGeometry x="1033" y="1302" width="142" height="128" as="geometry"/>
         </mxCell>
-        <mxCell id="b_brs" value="每日排程" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=timer;fillColor=#ffffff;strokeColor=#5a6b7b;strokeWidth=1.8;" vertex="1" parent="1">
-          <mxGeometry x="1541" y="747" width="38" height="38" as="geometry"/>
+        <mxCell id="b_dls" value="每日排程" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=timer;fillColor=#ffffff;strokeColor=#5a6b7b;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="846" y="267" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="b_br1" value="維護部頒代碼表與法條對照表並置於SFTP" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1481" y="853" width="158" height="66" as="geometry"/>
+        <mxCell id="b_dl" value="至大腦SFTP下載部頒代碼表與法條對照表" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="373" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="b_bre" value="完成" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
-          <mxGeometry x="1541" y="987" width="38" height="38" as="geometry"/>
+        <mxCell id="b_dle" value="完成" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
+          <mxGeometry x="846" y="507" width="38" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_brdb" value="部頒代碼表、法條對照表" style="shape=datastore;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="1532" y="381" width="56" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="b_cs" value="AI判讀結果已寫入暫存區" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" vertex="1" parent="1">
           <mxGeometry x="2006" y="1467" width="38" height="38" as="geometry"/>
@@ -463,10 +469,10 @@
         <mxCell id="dio_exec_pB__f_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_8" target="b_be">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_exec_pBr__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_brs" target="b_br1">
+        <mxCell id="dio_exec_pB__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_dls" target="b_dl">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_exec_pBr__f_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_br1" target="b_bre">
+        <mxCell id="dio_exec_pB__f_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_dl" target="b_dle">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="dio_exec_pC__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_cs" target="b_9">
@@ -502,8 +508,8 @@
         <mxCell id="dio_mf_2" value="AI判讀結果寫入刑案管理系統暫存區" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_be" target="b_cs">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1445" y="1366"/><mxPoint x="1445" y="1486"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_mf_3" value="部頒代碼表、法條對照表(每日SFTP批次下載)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_br1" target="b_5">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1212" y="886"/><mxPoint x="1212" y="886"/></Array></mxGeometry>
+        <mxCell id="dio_mf_3" value="部頒代碼表、法條對照表" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_brdb" target="b_dl">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1238" y="406"/><mxPoint x="1238" y="406"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_exec_pA__as_1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_n2" target="b_2">
           <mxGeometry relative="1" as="geometry"/>

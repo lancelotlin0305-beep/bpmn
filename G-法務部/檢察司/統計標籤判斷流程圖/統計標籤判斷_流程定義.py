@@ -47,13 +47,15 @@ def build_pretrial():
            "AI智慧輔助系統判讀完個案欄位屬性後,直接呼叫刑案管理系統API將判讀結果寫入暫存區;使用者於刑案管理系統點選AI引用時,由系統自暫存區讀取(RFP工項要求API整合)", 0)
     pB.assoc("a_n3", "a_5")
     pB.flow("a_bs", "a_3"); pB.flow("a_3", "a_4"); pB.flow("a_4", "a_5"); pB.flow("a_5", "a_ae2")
+    # AI 每日排程:自大腦SFTP下載部頒代碼表與法條對照表(供判讀套用),置主流程上方獨立小流程
+    pB.add("a_dls", "timer", "每日排程", 0, 1)
+    pB.add("a_dl",  "task",  "至大腦SFTP下載部頒代碼表與法條對照表", 0, 2, kind="system")
+    pB.add("a_dle", "end",   "完成", 0, 3)
+    pB.flow("a_dls", "a_dl"); pB.flow("a_dl", "a_dle")
 
-    # Pool 大腦:每日排程維護部頒代碼表與法條對照表(置於SFTP),供 AI 下載輔助判讀
-    pBr = c.add_pool(Proc("pre_pBr", "大腦", ["系統"]))
-    pBr.add("a_brs", "timer", "每日排程", 0, 6)
-    pBr.add("a_br1", "task", "維護部頒代碼表與法條對照表並置於SFTP", 0, 7, kind="system")
-    pBr.add("a_bre", "end",  "完成", 0, 8)
-    pBr.flow("a_brs", "a_br1"); pBr.flow("a_br1", "a_bre")
+    # Pool 大腦:部頒代碼表與法條對照表原存於此(SFTP),供 AI 每日下載(被動來源)
+    pBr = c.add_pool(Proc("pre_pBr", "大腦", ["SFTP"]))
+    pBr.add("a_brdb", "database", "部頒代碼表、法條對照表", 0, 2)
 
     # Pool 3:刑案管理系統
     pC = c.add_pool(Proc("pre_pC", "刑案管理系統", ["使用者"]))
@@ -79,8 +81,8 @@ def build_pretrial():
     # 跨 pool 訊息流(單向接力)
     c.message("a_ae", "a_bs", "書類PDF拋轉SFTP,AI批次撈取")
     c.message("a_ae2", "a_cs", "判讀結果寫入刑案管理系統暫存區")
-    # 大腦→AI:每日 SFTP 下載部頒代碼表與法條對照表輔助判讀
-    c.message("a_br1", "a_4", "部頒代碼表、法條對照表(每日SFTP批次下載)")
+    # 大腦(SFTP)→AI 下載任務:AI 每日下載部頒代碼表與法條對照表
+    c.message("a_brdb", "a_dl", "部頒代碼表、法條對照表")
     return c
 
 
@@ -126,13 +128,15 @@ def build_execution():
     pB.flow("b_gw1", "b_6", "上訴駁回→是", route="outRight")  # 是:旁置右子欄
     pB.flow("b_6", "b_4", "重查", route="sideRight")  # 重查:走右通道上回 b_4(b_d1 已移除、右通道淨空)
     pB.flow("b_7", "b_8"); pB.flow("b_8", "b_be")
+    # AI 每日排程:自大腦SFTP下載部頒代碼表與法條對照表(供判讀套用),置主流程上方獨立小流程
+    pB.add("b_dls", "timer", "每日排程", 0, 1)
+    pB.add("b_dl",  "task",  "至大腦SFTP下載部頒代碼表與法條對照表", 0, 2, kind="system")
+    pB.add("b_dle", "end",   "完成", 0, 3)
+    pB.flow("b_dls", "b_dl"); pB.flow("b_dl", "b_dle")
 
-    # Pool 大腦:每日排程維護部頒代碼表與法條對照表(置於SFTP),供 AI 下載輔助判讀
-    pBr = c.add_pool(Proc("exec_pBr", "大腦", ["系統"]))
-    pBr.add("b_brs", "timer", "每日排程", 0, 5)
-    pBr.add("b_br1", "task", "維護部頒代碼表與法條對照表並置於SFTP", 0, 6, kind="system")
-    pBr.add("b_bre", "end",  "完成", 0, 7)
-    pBr.flow("b_brs", "b_br1"); pBr.flow("b_br1", "b_bre")
+    # Pool 大腦:部頒代碼表與法條對照表原存於此(SFTP),供 AI 每日下載(被動來源)
+    pBr = c.add_pool(Proc("exec_pBr", "大腦", ["SFTP"]))
+    pBr.add("b_brdb", "database", "部頒代碼表、法條對照表", 0, 2)
 
     # Pool C:刑案管理系統(單泳道加寬至 2 子欄,供閘道 是-分支旁置)
     pC = c.add_pool(Proc("exec_pC", "刑案管理系統", ["使用者"]))
@@ -158,16 +162,16 @@ def build_execution():
     # 跨 pool 訊息流(單向接力)
     c.message("b_ae", "b_bs", "案件資料:案號/被告姓名/身分證號")
     c.message("b_be", "b_cs", "AI判讀結果寫入刑案管理系統暫存區")
-    # 大腦→AI:每日 SFTP 下載部頒代碼表與法條對照表輔助判讀
-    c.message("b_br1", "b_5", "部頒代碼表、法條對照表(每日SFTP批次下載)")
+    # 大腦(SFTP)→AI 下載任務:AI 每日下載部頒代碼表與法條對照表
+    c.message("b_brdb", "b_dl", "部頒代碼表、法條對照表")
     return c
 
 
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_pretrial(), build_execution()], "統計標籤判斷",
-               outdir, version="V14.00", src=__file__,
-               change="兩頁各新增「大腦」pool:每日排程(timer)維護部頒代碼表與法條對照表並置於SFTP,由 AI智慧輔助系統每日SFTP批次下載輔助判讀(以訊息流接至判讀任務——偵查類 a_4、執行類 b_5)",
+               outdir, version="V15.00", src=__file__,
+               change="修正大腦模型:大腦改為被動來源 pool(部頒代碼表與法條對照表原存於其 SFTP,以 database 節點表示);每日排程(timer)移至 AI智慧輔助系統 pool,新增旁流程「每日排程→至大腦SFTP下載兩表→完成」,訊息流由大腦 SFTP→AI 下載任務(原誤置於大腦維護並推送)",
                change_kind="結構", change_source="口頭指示")
 
     # ---- 後處理:跨系統自動介接連線標紅(builder 不支援線色,於輸出檔後製) ----
