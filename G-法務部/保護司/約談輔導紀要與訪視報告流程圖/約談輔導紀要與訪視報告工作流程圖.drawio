@@ -41,7 +41,7 @@
         <mxCell id="load" value="導引至AI觀護助理系統&#xa;帶入個案資料(含獄政等資料)(M9)" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="666" y="253" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="gw1" value="訪談方式" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="gw1" value="訪談方式" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=exclusiveGw;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="259" y="380" width="52" height="52" as="geometry"/>
         </mxCell>
         <mxCell id="come" value="至地檢接受約談" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
@@ -92,7 +92,7 @@
         <mxCell id="rev" value="觀護人審閱報告與處遇建議" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="206" y="1093" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="gw2" value="無誤?" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="gw2" value="無誤?" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=exclusiveGw;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="719" y="1220" width="52" height="52" as="geometry"/>
         </mxCell>
         <mxCell id="edit" value="以報告智慧編輯器修改(M5-03)" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -220,7 +220,7 @@
         <mxCell id="c_open" value="開啟觀護案件管理作業系統&#xa;查詢個案資料" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="206" y="253" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_gw1" value="訪談方式" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="c_gw1" value="訪談方式" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=exclusiveGw;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="259" y="380" width="52" height="52" as="geometry"/>
         </mxCell>
         <mxCell id="c_come" value="至地檢接受約談" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
