@@ -107,7 +107,54 @@ if __name__ == "__main__":
     emit_multi([build_cur(),
                 build("a_", "不起訴書生成工作流程圖", "檢察官不起訴書生成工作流程圖(含介接說明)",
                       with_notes=True)],
-               "不起訴書生成工作流程圖", outdir, version="V12.00", src=__file__,
-               change="頁2含介接說明AI主流程:將AI智慧輔助系統獨立為一個 pool,書類生成系統與漢書系統留在同一 pool(檢察官單泳道),pool 間以訊息流銜接(書類系統→AI 傳個案資料、AI→漢書 回傳草稿)",
-               change_kind="結構", change_source="口頭指示")
+               "不起訴書生成工作流程圖", outdir, version="V12.01", src=__file__,
+               change="頁2三輸入件(移送書/偵訊筆錄/警詢筆錄)關聯線改從任務「匯入卷證資料」右緣扇出(原偵訊繞左緣、警詢接底緣);後製調整 .drawio 進出點與 SVG 走線",
+               change_kind="文字", change_source="口頭指示")
+
+    # ---- 後製:頁2 三輸入件關聯線改從任務 t3(匯入卷證資料)右緣扇出 ----
+    # 引擎 assoc 路由器把「偵訊筆錄」接 t3 左緣、「警詢筆錄」接底緣,draw.io 依釘點
+    # 自動繞線而雜亂;此處把三條都釘到 t3 右緣(Y 錯開)、清 waypoints 讓其乾淨扇出。
+    import io, re
+    base = os.path.abspath(outdir)
+    ENTRY = {"a_d2": "0.2", "a_d1": "0.5", "a_d4": "0.8"}   # 偵訊上/移送中/警詢下
+    # 1) .drawio:三條邊 exit=doc 左緣中、entry=t3 右緣(扇開)、清 points
+    dio = os.path.join(base, "不起訴書生成工作流程圖.drawio")
+    t = io.open(dio, encoding="utf-8").read()
+    for src, ey in ENTRY.items():
+        def _fix(m, ey=ey):
+            cell = m.group(0)
+            cell = re.sub(r'exitX=[0-9.]+;exitY=[0-9.]+', 'exitX=0;exitY=0.5', cell)
+            cell = re.sub(r'entryX=[0-9.]+;entryY=[0-9.]+', 'entryX=1;entryY=%s' % ey, cell)
+            cell = re.sub(r'<Array as="points">.*?</Array>', '', cell, flags=re.S)
+            return cell
+        t = re.sub(r'<mxCell\b(?=[^>]*source="%s")(?=[^>]*target="a_t3")[^>]*>.*?</mxCell>'
+                   % src, _fix, t, flags=re.S)
+    io.open(dio, "w", encoding="utf-8").write(t)
+    # 2) 頁2 .svg:三條 dotted 關聯線改成從 t3 右緣(x944)扇出的正交路徑
+    #    t3 右緣 x944、y 1093..1159;doc 左緣 x1074;偵訊y1006/移送y1126/警詢y1246
+    NEW = {"偵訊": ((1070, 1120), (980, 1035),  "M1074,1006 L1009,1006 L1009,1106 L944,1106"),
+           "移送": ((1070, 1120), (1100, 1155), "M1074,1126 L944,1126"),
+           "警詢": ((1070, 1120), (1218, 1275), "M1074,1246 L1009,1246 L1009,1146 L944,1146")}
+    PATH_RE = re.compile(r'<path d="(M[0-9. ,LMA-]+)" fill="none" stroke="#8a99a8" '
+                         r'stroke-width="1.4" stroke-dasharray="2,4"\s*/>')
+    def _fix_svg(text):
+        def repl(m):
+            pts = [(float(a), float(b))
+                   for a, b in re.findall(r'(-?[0-9.]+),(-?[0-9.]+)', m.group(1))]
+            for xr, yr, nd in NEW.values():
+                if any(xr[0] <= x <= xr[1] and yr[0] <= y <= yr[1] for x, y in pts):
+                    return ('<path d="%s" fill="none" stroke="#8a99a8" '
+                            'stroke-width="1.4" stroke-dasharray="2,4"/>' % nd)
+            return m.group(0)
+        text = PATH_RE.sub(repl, text)
+        # 偵訊筆錄關聯線 SVG 繪製器未輸出(既有 quirk),補畫右緣扇出路徑
+        if "M1074,1006" not in text:
+            text = text.replace(
+                "</svg>",
+                '<path d="M1074,1006 L1009,1006 L1009,1106 L944,1106" fill="none" '
+                'stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>\n</svg>', 1)
+        return text
+    svg2 = os.path.join(base, "不起訴書生成工作流程圖.svg")
+    _svgtxt = io.open(svg2, encoding="utf-8").read()
+    io.open(svg2, "w", encoding="utf-8").write(_fix_svg(_svgtxt))
     print("done ->", os.path.abspath(outdir))
