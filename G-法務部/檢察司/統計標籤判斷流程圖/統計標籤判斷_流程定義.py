@@ -34,10 +34,14 @@ def build_pretrial():
     pA.assoc("a_n2", "a_2b")
     pA.flow("a_s", "a_1"); pA.flow("a_1", "a_2"); pA.flow("a_2", "a_2b"); pA.flow("a_2b", "a_ae")
 
+    # Pool 小腦:書類生成系統拋轉之書類PDF暫存於此 SFTP,供 AI 排程撈取(被動來源)
+    pXn = c.add_pool(Proc("pre_pXn", "小腦", ["SFTP"]))
+    pXn.add("a_xndb", "database", "書類PDF(書類生成拋轉)", 0, 5)
+
     # Pool 2:AI智慧輔助系統
     pB = c.add_pool(Proc("pre_pB", "AI智慧輔助系統", ["系統"]))
-    pB.add("a_bs", "start", "接收SFTP書類PDF", 0, 5)
-    pB.add("a_3",  "task",  "批次撈取SFTP之書類PDF", 0, 6, kind="system")
+    pB.add("a_bs", "timer", "定時批次排程", 0, 5)
+    pB.add("a_3",  "task",  "批次撈取小腦SFTP之書類PDF", 0, 6, kind="system")
     pB.add("a_4",  "task",  "AI智慧輔助系統判讀五類統計欄位", 0, 7, kind="system")
     pB.add("a_5",  "task",  "整理判讀結果並呼叫刑案管理系統API存入暫存檔", 0, 8, kind="system")
     pB.add("a_ae2","end",   "判讀結果寫入暫存區", 0, 9)
@@ -79,7 +83,8 @@ def build_pretrial():
     pC.flow("a_11", "a_e")
 
     # 跨 pool 訊息流(單向接力)
-    c.message("a_ae", "a_bs", "書類PDF拋轉SFTP,AI批次撈取")
+    c.message("a_ae", "a_xndb", "書類PDF拋轉至SFTP")          # 書類生成→小腦:上傳書類PDF
+    c.message("a_xndb", "a_3", "AI排程撈取、下載書類PDF")     # 小腦→AI:批次下載書類PDF
     c.message("a_ae2", "a_cs", "判讀結果寫入刑案管理系統暫存區")
     # 大腦(SFTP)→AI 下載任務:AI 每日下載部頒代碼表與法條對照表
     c.message("a_brdb", "a_dl", "部頒代碼表、法條對照表")
@@ -170,8 +175,8 @@ def build_execution():
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_pretrial(), build_execution()], "統計標籤判斷",
-               outdir, version="V15.00", src=__file__,
-               change="修正大腦模型:大腦改為被動來源 pool(部頒代碼表與法條對照表原存於其 SFTP,以 database 節點表示);每日排程(timer)移至 AI智慧輔助系統 pool,新增旁流程「每日排程→至大腦SFTP下載兩表→完成」,訊息流由大腦 SFTP→AI 下載任務(原誤置於大腦維護並推送)",
+               outdir, version="V16.00", src=__file__,
+               change="偵查類新增「小腦」pool:書類生成系統拋轉之書類PDF暫存於小腦 SFTP(database 節點),AI改為定時批次排程(timer)撈取小腦SFTP、下載書類PDF判讀;原書類生成→AI直接訊息改為 書類生成→小腦(上傳)+小腦→AI(下載)兩段",
                change_kind="結構", change_source="口頭指示")
 
     # ---- 後處理:跨系統自動介接連線標紅(builder 不支援線色,於輸出檔後製) ----
