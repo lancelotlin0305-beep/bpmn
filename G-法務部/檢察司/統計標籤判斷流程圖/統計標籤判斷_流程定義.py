@@ -108,6 +108,8 @@ def build_execution():
            "使用者於案件管理系統執行分案時,將執行案號、確認案號、被告姓名、身分證號傳給AI智慧輔助系統作為撈取判讀依據", 0)
     pA.assoc("b_n2", "b_2")
     pA.flow("b_s", "b_1"); pA.flow("b_1", "b_2"); pA.flow("b_2", "b_ae")
+    # 案件管理系統工作步驟以虛線群組框標示待釐清
+    pA.container("exec_pA_grp", "待與開發商討論", ["b_1", "b_2"], kind="event")
 
     # Pool B:AI智慧輔助系統(單泳道加寬至 2 子欄,供閘道 是-分支旁置)
     pB = c.add_pool(Proc("exec_pB", "AI智慧輔助系統", ["系統"]))
@@ -175,9 +177,9 @@ def build_execution():
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_pretrial(), build_execution()], "統計標籤判斷",
-               outdir, version="V16.00", src=__file__,
-               change="偵查類新增「小腦」pool:書類生成系統拋轉之書類PDF暫存於小腦 SFTP(database 節點),AI改為定時批次排程(timer)撈取小腦SFTP、下載書類PDF判讀;原書類生成→AI直接訊息改為 書類生成→小腦(上傳)+小腦→AI(下載)兩段",
-               change_kind="結構", change_source="口頭指示")
+               outdir, version="V16.01", src=__file__,
+               change="執行類案件管理系統 pool 之工作步驟(執行分案、傳送資料)加虛線群組框,標示「待與開發商討論」",
+               change_kind="文字", change_source="口頭指示")
 
     # ---- 後處理:跨系統自動介接連線標紅(builder 不支援線色,於輸出檔後製) ----
     import io, re
