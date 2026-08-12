@@ -15,51 +15,64 @@ from bpmn_builder import Proc, Collab, emit_multi
 
 
 def build_pretrial():
-    """頁1:偵查類(觸發點=檢察官於書類生成系統列印/儲存書類→PDF拋轉SFTP→AI批次撈取)。"""
-    p = Proc("統計標籤判斷_偵查類_工作流程圖", "統計標籤判斷(偵查類)工作流程圖",
-             ["檢察官", "刑案管理系統使用者"],
-             bands=[("書類生成系統", ["a_s", "a_1", "a_2", "a_2b", "a_sftpin"]),
-                    ("AI智慧輔助系統", ["a_3", "a_4", "a_5"]),
-                    ("刑案管理系統", ["a_sftp", "a_6", "a_7", "a_8", "a_9",
-                                      "a_10", "a_gw", "a_11", "a_e", "a_n1"])])
-    p.add("a_s",    "start",   "開始", 0)
-    p.add("a_1",    "task",    "完成起訴書或不起訴書", 0, kind="user")
-    p.add("a_2",    "task",    "執行列印或儲存", 0, kind="user")
-    p.add("a_2b",   "task",    "產製書類PDF並拋轉至SFTP", 0, kind="system")
-    p.add("a_sftpin","database","SFTP(書類PDF)", 0)
-    p.add("a_3",    "task",    "批次撈取SFTP之書類PDF", 0, kind="system")
-    p.add("a_4",    "task",    "AI智慧輔助系統判讀五類統計欄位", 0, kind="system")
-    p.add("a_5",    "task",    "整理判讀結果並呼叫刑案管理系統API存入暫存檔", 0, kind="system")
-    p.add("a_sftp", "database","刑案管理系統暫存區", 1)
-    p.add("a_6",    "task",    "登入刑案管理系統", 1, kind="user")
-    p.add("a_7",    "task",    "進入偵查類案件查詢個案", 1, kind="user")
-    p.add("a_8",    "task",    "點選「AI引用」按鈕", 1, kind="user")
-    p.add("a_9",    "task",    "自暫存區讀取AI判讀結果", 1, kind="system")
-    p.add("a_10",   "task",    "檢視判讀資料是否符合需求", 1, kind="user")
-    p.add("a_gw",   "gateway", "引用?", 1)
-    p.add("a_11",   "task",    "點選引用,欄位資訊存入刑案管理系統", 1, kind="user")
-    p.add("a_e",    "end",     "結束", 1)
+    """頁1:偵查類——3 系統各為獨立 pool 的協作圖(書類生成系統→AI智慧輔助系統
+    →刑案管理系統,單向接力鏈:書類PDF經SFTP批次撈取、判讀結果經API寫入暫存區)。"""
+    c = Collab("統計標籤判斷_偵查類_工作流程圖", "統計標籤判斷(偵查類)工作流程圖")
 
-    p.add("a_d1", "input",  "起訴書/不起訴書PDF", 0)
-    p.add("a_d2", "output", "欄位判讀結果", 0)
-    p.add("a_n1", "note",   "引用→否時:後續由統計處收集不符資訊,回饋進行判讀邏輯調整", 1, 17)
-    p.assoc("a_d1", "a_2b"); p.assoc("a_5", "a_d2"); p.assoc("a_n1", ("a_gw", "a_e"))
+    # 階梯式列位(書類生成:0-4、AI:5-9、刑案:10-18),跨 pool 訊息流一律向下
+    # Pool 1:書類生成系統
+    pA = c.add_pool(Proc("pre_pA", "書類生成系統", ["檢察官"]))
+    pA.add("a_s",  "start", "開始", 0, 0)
+    pA.add("a_1",  "task",  "完成起訴書或不起訴書", 0, 1, kind="user")
+    pA.add("a_2",  "task",  "執行列印或儲存", 0, 2, kind="user")
+    pA.add("a_2b", "task",  "產製書類PDF並拋轉至SFTP", 0, 3, kind="system")
+    pA.add("a_ae", "end",   "書類PDF拋轉SFTP", 0, 4)
+    pA.add("a_d1", "input", "起訴書/不起訴書PDF", 0)
+    pA.assoc("a_d1", "a_2b")
+    pA.add("a_n2", "note",
+           "檢察官執行列印/儲存時,由書類生成系統產製書類PDF拋轉至SFTP;AI智慧輔助系統再以批次方式定時撈取判讀(非即時呼叫)", 0)
+    pA.assoc("a_n2", "a_2b")
+    pA.flow("a_s", "a_1"); pA.flow("a_1", "a_2"); pA.flow("a_2", "a_2b"); pA.flow("a_2b", "a_ae")
 
-    p.add("a_n2", "note",
-          "檢察官執行列印/儲存時,由書類生成系統產製書類PDF拋轉至SFTP;AI智慧輔助系統再以批次方式定時撈取判讀(非即時呼叫)", 0)
-    p.add("a_n3", "note",
-          "AI智慧輔助系統判讀完個案欄位屬性後,直接呼叫刑案管理系統API將判讀結果寫入暫存區;使用者於刑案管理系統點選AI引用時,由系統自暫存區讀取(RFP工項要求API整合)", 0)
-    p.assoc("a_n2", "a_2b"); p.assoc("a_n3", "a_5")
+    # Pool 2:AI智慧輔助系統
+    pB = c.add_pool(Proc("pre_pB", "AI智慧輔助系統", ["系統"]))
+    pB.add("a_bs", "start", "接收SFTP書類PDF", 0, 5)
+    pB.add("a_3",  "task",  "批次撈取SFTP之書類PDF", 0, 6, kind="system")
+    pB.add("a_4",  "task",  "AI智慧輔助系統判讀五類統計欄位", 0, 7, kind="system")
+    pB.add("a_5",  "task",  "整理判讀結果並呼叫刑案管理系統API存入暫存檔", 0, 8, kind="system")
+    pB.add("a_ae2","end",   "判讀結果寫入暫存區", 0, 9)
+    pB.add("a_d2", "output", "欄位判讀結果", 0)
+    pB.assoc("a_5", "a_d2")
+    pB.add("a_n3", "note",
+           "AI智慧輔助系統判讀完個案欄位屬性後,直接呼叫刑案管理系統API將判讀結果寫入暫存區;使用者於刑案管理系統點選AI引用時,由系統自暫存區讀取(RFP工項要求API整合)", 0)
+    pB.assoc("a_n3", "a_5")
+    pB.flow("a_bs", "a_3"); pB.flow("a_3", "a_4"); pB.flow("a_4", "a_5"); pB.flow("a_5", "a_ae2")
 
-    p.flow("a_s", "a_1"); p.flow("a_1", "a_2"); p.flow("a_2", "a_2b")
-    p.flow("a_2b", "a_sftpin"); p.flow("a_sftpin", "a_3")
-    p.flow("a_3", "a_4"); p.flow("a_4", "a_5"); p.flow("a_5", "a_sftp")
-    p.flow("a_sftp", "a_6"); p.flow("a_6", "a_7"); p.flow("a_7", "a_8")
-    p.flow("a_8", "a_9"); p.flow("a_9", "a_10"); p.flow("a_10", "a_gw")
-    p.flow("a_gw", "a_11", "引用→是")
-    p.flow("a_gw", "a_e", "引用→否")
-    p.flow("a_11", "a_e")
-    return p
+    # Pool 3:刑案管理系統
+    pC = c.add_pool(Proc("pre_pC", "刑案管理系統", ["使用者"]))
+    pC.lane_subs = [2]
+    pC.add("a_cs", "start", "AI判讀結果已寫入暫存區", 0, 10)
+    pC.add("a_6",  "task",  "登入刑案管理系統", 0, 11, kind="user")
+    pC.add("a_7",  "task",  "進入偵查類案件查詢個案", 0, 12, kind="user")
+    pC.add("a_8",  "task",  "點選「AI引用」按鈕", 0, 13, kind="user")
+    pC.add("a_9",  "task",  "自暫存區讀取AI判讀結果", 0, 14, kind="system")
+    pC.add("a_10", "task",  "檢視判讀資料是否符合需求", 0, 15, kind="user")
+    pC.add("a_gw", "gateway","引用?", 0, 16)
+    pC.add("a_e",  "end",   "結束", 0, 18)
+    pC.add("a_11", "task",  "點選引用,欄位資訊存入刑案管理系統", 0, 17, kind="user")
+    pC.nodes["a_11"]["sub"] = 1   # 是-分支旁置右子欄,不擋 gw→a_e 直下
+    pC.add("a_n1", "note", "引用→否時:後續由統計處收集不符資訊,回饋進行判讀邏輯調整", 0)
+    pC.assoc("a_n1", "a_gw")
+    pC.flow("a_cs", "a_6"); pC.flow("a_6", "a_7"); pC.flow("a_7", "a_8")
+    pC.flow("a_8", "a_9"); pC.flow("a_9", "a_10"); pC.flow("a_10", "a_gw")
+    pC.flow("a_gw", "a_e", "引用→否", route="sideLeft")
+    pC.flow("a_gw", "a_11", "引用→是", route="outRight")
+    pC.flow("a_11", "a_e")
+
+    # 跨 pool 訊息流(單向接力)
+    c.message("a_ae", "a_bs", "書類PDF拋轉SFTP,AI批次撈取")
+    c.message("a_ae2", "a_cs", "判讀結果寫入刑案管理系統暫存區")
+    return c
 
 
 def build_execution():
@@ -135,8 +148,8 @@ def build_execution():
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_pretrial(), build_execution()], "統計標籤判斷",
-               outdir, version="V12.00", src=__file__,
-               change="執行類改為 3-pool 協作圖:三系統(案件管理系統/AI智慧輔助系統/刑案管理系統)各為獨立 pool、各一泳道,單向接力鏈以訊息流銜接(案件管理→AI 傳案件資料、AI→刑案管理 寫入暫存區);b_sftp 暫存區改為資料存放由 b_12 讀取。偵查類維持泳道版",
+               outdir, version="V13.00", src=__file__,
+               change="偵查類亦改為 3-pool 協作圖:三系統(書類生成系統/AI智慧輔助系統/刑案管理系統)各為獨立 pool、各一泳道,單向接力鏈以訊息流銜接(書類PDF拋轉SFTP批次撈取、判讀結果經API寫入暫存區);SFTP/暫存區資料節點移除、以訊息與註解表達;至此兩頁皆為多 pool 協作圖,跨系統標紅順序流全數改為訊息流",
                change_kind="結構", change_source="口頭指示")
 
     # ---- 後處理:跨系統自動介接連線標紅(builder 不支援線色,於輸出檔後製) ----
@@ -148,9 +161,7 @@ if __name__ == "__main__":
     SUF = "" if GIT else "_V11.00"
     vdir = outdir if GIT else os.path.join(outdir, "V11.00")
     red_edges = {  # pid → [(source, target, flow定義順序索引)]
-        # 執行類已改 3-pool 協作圖:跨系統連線成訊息流(本就虛線),不再標紅
-        "統計標籤判斷_偵查類_工作流程圖": [("a_2b", "a_sftpin", 3), ("a_sftpin", "a_3", 4),
-                                          ("a_5", "a_sftp", 7)],
+        # 偵查類、執行類皆已改 3-pool 協作圖:跨系統連線成訊息流(本就虛線),不再標紅
     }
 
     # 1) .drawio:依 source/target 精準改 style(順序流原色 #3a4a59)
@@ -166,7 +177,7 @@ if __name__ == "__main__":
                             + m.group(3), t)
             n += k
     io.open(dpath, "w", encoding="utf-8").write(t)
-    print("drawio 標紅連線:", n, "(預期 3)")
+    print("drawio 標紅連線:", n, "(預期 0:兩頁皆改訊息流)")
 
     # 2) .svg:順序流 path 無 id,依 flow() 定義順序取第 idx 條;箭頭改紅色 marker
     FLOW_TAG = re.compile(r'<path d="([^"]+)" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url\(#(arr)\)"\s*/>')
