@@ -27,9 +27,9 @@ def build(prefix, cid, name, with_notes=False):
     p1.add(q("x1"),  "end",   "轉AI智慧輔助系統", 0, 4)
     p1.flow(q("s"), q("t0")); p1.flow(q("t0"), q("t1")); p1.flow(q("t1"), q("t1b"))
     p1.flow(q("t1b"), q("x1"))
-    # 同泳道下半段:AI 回傳草稿後匯入漢書系統定稿
-    p1.add(q("r1"),  "start", "AI回傳草稿", 0, 17)  # 與 a9 同列:跨 pool 訊息流走水平直線(使用者指示)
-    p1.add(q("t9"),  "task",  "複製內文或下載後匯入漢書系統", 0, 18, kind="user")
+    # 同泳道下半段:使用者複製AI草稿後,自行至漢書系統定稿(無系統介接,V13.00)
+    p1.add(q("r1"),  "start", "複製書類草稿", 0, 17)  # 與 a9 同列:訊息流走水平直線
+    p1.add(q("t9"),  "task",  "重新登入漢書系統後,貼上書類內文或下載匯入後存檔", 0, 18, kind="user")
     p1.add(q("e"),   "end",   "完成", 0, 19)
     p1.add(q("d5"),  "output", "不起訴書(定稿)", 0)
     p1.assoc(q("t9"), q("d5"))
@@ -48,7 +48,7 @@ def build(prefix, cid, name, with_notes=False):
     p2.add(q("t6"),  "task",  "AI智慧輔助系統生成不起訴書草稿", 0, 14, kind="system")
     p2.add(q("t7"),  "task",  "檢視草稿內容", 0, 15, kind="user")
     p2.add(q("t8"),  "task",  "直接調整草稿內文", 0, 16, kind="user")
-    p2.add(q("a9"),  "end",   "回傳漢書系統", 0, 17)
+    p2.add(q("a9"),  "end",   "草稿完成", 0, 17)
     p2.add(q("d3"),  "output", "不起訴書草稿", 0)
     p2.assoc(q("t6"), q("d3"))
     p2.add(q("d1"),  "input", "移送書(from案管系統)", 0)
@@ -62,7 +62,7 @@ def build(prefix, cid, name, with_notes=False):
 
     # 跨 pool 訊息流(端點取各段起訖事件,走線乾淨)
     c.message(q("x1"), q("a0"), "個案資料/案號")
-    c.message(q("a9"), q("r1"), "不起訴書草稿內文")
+    c.message(q("a9"), q("r1"), "書類草稿(人工複製/下載)")  # 無系統介接,人工銜接(V13.00)
 
     if with_notes:
         p1.add(q("n1"), "note",
@@ -71,9 +71,6 @@ def build(prefix, cid, name, with_notes=False):
         p2.add(q("n2"), "note",
               "檢視與調整之編修結果應回饋自動Fine-tuning機制,持續優化模型", 0)
         p2.assoc(q("n2"), q("t8"))
-        p1.add(q("n3"), "note",
-              "應以標準化介接直接匯入書類系統(現行人工匯入)", 0)
-        p1.assoc(q("n3"), q("e"))
     return c
 
 
@@ -107,9 +104,10 @@ if __name__ == "__main__":
     emit_multi([build_cur(),
                 build("a_", "不起訴書生成工作流程圖", "檢察官不起訴書生成工作流程圖(含介接說明)",
                       with_notes=True)],
-               "不起訴書生成工作流程圖", outdir, version="V12.05", src=__file__,
-               change="頁2壓縮縱向間距:接收個案資料→匯入卷證資料只留1列(文件堆疊),後續任務鏈整體上移3列;扇出後製座標同步重校",
-               change_kind="文字", change_source="口頭指示")
+               "不起訴書生成工作流程圖", outdir, version="V13.00", src=__file__,
+               change="頁2回漢書系統改人工銜接:移除「應以標準化介接直接匯入」備註;a9→r1訊息流改標「書類草稿(人工複製/下載)」;"
+                      "a9改名「草稿完成」、r1改名「複製書類草稿」;匯入任務改「重新登入漢書系統後,貼上書類內文或下載匯入後存檔」",
+               change_kind="結構", change_source="口頭指示")
 
     # ---- 後製:頁2 三輸入件關聯線改從任務 t3(匯入卷證資料)右緣扇出 ----
     # 引擎 assoc 路由器把「偵訊筆錄」接 t3 左緣、「警詢筆錄」接底緣,draw.io 依釘點
