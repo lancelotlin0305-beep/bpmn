@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="統計標籤判斷(執行類)工作流程圖 V16.01" viewBox="-385 7 3280 2523" font-family="Microsoft JhengHei, PingFang TC, Noto Sans CJK TC, sans-serif">
-<title>統計標籤判斷(執行類)工作流程圖 V16.01</title>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="統計標籤判斷(執行類)工作流程圖 V17.02" viewBox="-385 7 3280 2523" font-family="Microsoft JhengHei, PingFang TC, Noto Sans CJK TC, sans-serif">
+<title>統計標籤判斷(執行類)工作流程圖 V17.02</title>
 <rect x="-385" y="7" width="3280" height="2523" fill="#ffffff"/>
-<text x="140" y="50" font-size="19" font-weight="bold" fill="#1f2d3d">統計標籤判斷(執行類)工作流程圖 V16.01</text>
+<text x="140" y="50" font-size="19" font-weight="bold" fill="#1f2d3d">統計標籤判斷(執行類)工作流程圖 V17.02</text>
 <defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#5a6b7b"/></marker><marker id="mfarr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#6b7b8b" stroke-width="1.3"/></marker><marker id="mfdot" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth"><circle cx="5" cy="5" r="3.2" fill="#fff" stroke="#6b7b8b" stroke-width="1.3"/></marker></defs>
 <rect x="140" y="70" width="490" height="2436" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
 <rect x="140" y="70" width="30" height="2436" fill="#e7edf3" stroke="#9aa7b4"/>
 <text x="158" y="1288.0" font-size="13" font-weight="bold" fill="#3a4a59" text-anchor="middle" transform="rotate(-90 158 1288.0)">案件管理系統</text>
 <rect x="170" y="70" width="460" height="2436" fill="none" stroke="#cdd6df"/>
 <rect x="170" y="70" width="460" height="36" fill="#eef2f6" stroke="#cdd6df"/>
-<text x="400.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">使用者</text>
+<text x="400.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">地檢署分案室</text>
 <rect x="720" y="70" width="490" height="2436" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
 <rect x="720" y="70" width="30" height="2436" fill="#e7edf3" stroke="#9aa7b4"/>
 <text x="738" y="1288.0" font-size="13" font-weight="bold" fill="#3a4a59" text-anchor="middle" transform="rotate(-90 738 1288.0)">AI智慧輔助系統</text>
@@ -64,7 +64,7 @@
 <path d="M2051,2206 L2255,2206 L2255,2293" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <rect x="2149.6" y="2187.0" width="68" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
 <text x="2183.6" y="2202.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">引用→是</text>
-<path d="M2255,2359 L2255,2403 L2025,2403 L2025,2427" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M2255,2359 L2255,2446 L2044,2446" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M2255,2115 L2255,2156 L2039,2156 L2039,2180" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <polyline points="304,526 575,526 575,646 846,646" fill="none" stroke="#6b7b8b" stroke-width="1.4" stroke-dasharray="6 4" marker-start="url(#mfdot)" marker-end="url(#mfarr)"/>
 <rect x="347.65" y="510.0" width="16" height="11" fill="#ffffff" stroke="#6b7b8b" stroke-width="1.2"/>
@@ -90,9 +90,10 @@
 <rect x="206" y="373" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
 <circle cx="218" cy="384" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
 <path d="M218,384 l6.5,0.0 M218,384 l-6.5,0.0 M218,384 l0.0,6.5 M218,384 l0.0,-6.5 M218,384 l4.5954999999999995,4.5954999999999995 M218,384 l-4.5954999999999995,4.5954999999999995 M218,384 l4.5954999999999995,-4.5954999999999995 M218,384 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="285.0" y="395.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">傳送執行案號、確認案號</text>
-<text x="285.0" y="410.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">、被告姓名、身分證號至</text>
-<text x="285.0" y="425.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統</text>
+<text x="285.0" y="387.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">傳送執行案號、確認案號</text>
+<text x="285.0" y="402.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">(院方)、被告姓名、身</text>
+<text x="285.0" y="417.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">分證號至AI智慧輔助系</text>
+<text x="285.0" y="432.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">統</text>
 <circle cx="285.0" cy="526.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
 <text x="285.0" y="557" font-size="11.5" fill="#2a3a49" text-anchor="middle">轉AI智慧輔</text>
 <text x="285.0" y="570" font-size="11.5" fill="#2a3a49" text-anchor="middle">助系統</text>

@@ -5,13 +5,13 @@
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="dio_title" value="統計標籤判斷(偵查類)工作流程圖 V16.01" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
+        <mxCell id="dio_title" value="統計標籤判斷(偵查類)工作流程圖 V17.02" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
           <mxGeometry x="140" y="22" width="410" height="28" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="140" y="70" width="490" height="2316" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pooltitle_0" value="書類生成系統" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" vertex="1" parent="1">
+        <mxCell id="dio_pooltitle_0" value="檢察書類製作系統" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" vertex="1" parent="1">
           <mxGeometry x="140" y="70" width="30" height="2316" as="geometry"/>
         </mxCell>
         <mxCell id="dio_hdrline_0" value="" style="rounded=0;html=1;fillColor=#8a99a8;strokeColor=none;" vertex="1" parent="1">
@@ -89,7 +89,7 @@
         <mxCell id="a_1" value="完成起訴書或不起訴書" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="206" y="253" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="a_2" value="執行列印或儲存" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="a_2" value="執行列印或儲存&#xa;(書類列印+核章欄)" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="206" y="373" width="158" height="66" as="geometry"/>
         </mxCell>
         <mxCell id="a_2b" value="產製書類PDF並拋轉至SFTP" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
@@ -107,11 +107,20 @@
         <mxCell id="a_n2__br" value="" style="shape=mxgraph.flowchart.annotation_2;html=1;strokeColor=#5a6b7b;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="435" y="356" width="12" height="100" as="geometry"/>
         </mxCell>
-        <mxCell id="a_n2__tx" value="檢察官執行列印/儲存時,由書類生成系統產製書類PDF拋轉至SFTP;AI智慧輔助系統再以批次方式定時撈取判讀(非即時呼叫)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" vertex="1" parent="1">
+        <mxCell id="a_n2__tx" value="檢察官執行列印/儲存時,由書類系統產製書類PDF拋轉至SFTP;AI智慧輔助系統再以批次方式定時撈取判讀(非即時呼叫)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" vertex="1" parent="1">
           <mxGeometry x="453" y="356" width="142" height="100" as="geometry"/>
         </mxCell>
-        <mxCell id="a_xndb" value="書類PDF(書類生成拋轉)" style="shape=datastore;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+        <mxCell id="a_xndb" value="書類PDF" style="shape=datastore;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
           <mxGeometry x="952" y="741" width="56" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="a_xnote" value="" style="fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="900" y="857" width="160" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="a_xnote__br" value="" style="shape=mxgraph.flowchart.annotation_2;html=1;strokeColor=#5a6b7b;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="900" y="857" width="12" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="a_xnote__tx" value="書類系統拋轉;檔名：包含偵字案號&gt;&gt;需要請宏碁提供標號邏輯" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" vertex="1" parent="1">
+          <mxGeometry x="918" y="857" width="142" height="58" as="geometry"/>
         </mxCell>
         <mxCell id="a_bs" value="定時批次排程" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=timer;fillColor=#ffffff;strokeColor=#5a6b7b;strokeWidth=1.8;" vertex="1" parent="1">
           <mxGeometry x="1426" y="747" width="38" height="38" as="geometry"/>
@@ -242,11 +251,11 @@
         <mxCell id="dio_pre_pC__f_8" value="引用→是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_gw" target="a_11">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2835" y="2086"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_pre_pC__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_11" target="a_e">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2835" y="2283"/><mxPoint x="2605" y="2283"/></Array></mxGeometry>
+        <mxCell id="dio_pre_pC__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_11" target="a_e">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2835" y="2326"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_mf_1" value="書類PDF拋轉至SFTP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_ae" target="a_xndb">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="628" y="646"/><mxPoint x="628" y="766"/></Array></mxGeometry>
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="540" y="646"/><mxPoint x="540" y="766"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_mf_2" value="AI排程撈取、下載書類PDF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_xndb" target="a_3">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1187" y="766"/><mxPoint x="1187" y="886"/></Array></mxGeometry>
@@ -262,6 +271,9 @@
         </mxCell>
         <mxCell id="dio_pre_pA__as_2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.589;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_n2" target="a_2b">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="515" y="469"/><mxPoint x="299" y="469"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="dio_pre_pXn__as_1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.588;exitY=0.0;exitDx=0;exitDy=0;entryX=0.75;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_xnote" target="a_xndb">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pre_pB__as_1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_5" target="a_d2">
           <mxGeometry relative="1" as="geometry"/>
@@ -283,7 +295,7 @@
         <mxCell id="dio_ctn_exec_pA_grp" value="待與開發商討論" style="rounded=1;arcSize=6;html=1;fillColor=none;strokeColor=#5a6b7b;dashed=1;verticalAlign=top;align=left;spacingLeft=8;fontStyle=2;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="176" y="203" width="448" height="258" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_title" value="統計標籤判斷(執行類)工作流程圖 V16.01" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
+        <mxCell id="dio_title" value="統計標籤判斷(執行類)工作流程圖 V17.02" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
           <mxGeometry x="140" y="22" width="410" height="28" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
@@ -298,7 +310,7 @@
         <mxCell id="dio_lane_0_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
           <mxGeometry x="170" y="70" width="460" height="2436" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_0_0" value="使用者" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+        <mxCell id="dio_lanehdr_0_0" value="地檢署分案室" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
           <mxGeometry x="170" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
         <mxCell id="dio_pool_1" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
@@ -352,7 +364,7 @@
         <mxCell id="b_1" value="執行分案" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="206" y="253" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="b_2" value="傳送執行案號、確認案號、被告姓名、身分證號至AI智慧輔助系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="b_2" value="傳送執行案號、確認案號(院方)、被告姓名、身分證號至AI智慧輔助系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="206" y="373" width="158" height="66" as="geometry"/>
         </mxCell>
         <mxCell id="b_ae" value="轉AI智慧輔助系統" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
@@ -523,8 +535,8 @@
         <mxCell id="dio_exec_pC__f_8" value="引用→是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_gw2" target="b_14">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2255" y="2206"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_exec_pC__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_14" target="b_e">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2255" y="2403"/><mxPoint x="2025" y="2403"/></Array></mxGeometry>
+        <mxCell id="dio_exec_pC__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_14" target="b_e">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2255" y="2446"/></Array></mxGeometry>
         </mxCell>
         <mxCell id="dio_mf_1" value="案件資料:案號/被告姓名/身分證號" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#7a4a12;fontColor=#7a4a12;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_ae" target="b_bs">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="575" y="526"/><mxPoint x="575" y="646"/></Array></mxGeometry>

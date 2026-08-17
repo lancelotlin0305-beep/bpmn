@@ -10,33 +10,36 @@ V11.00:執行類重構——
 執行: python 統計標籤判斷_流程定義.py [輸出資料夾]
 """
 import sys, os
-sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
+sys.path.insert(0, r"D:\claude-skills-marketplace\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, Collab, emit_multi
 
 
 def build_pretrial():
-    """頁1:偵查類——3 系統各為獨立 pool 的協作圖(書類生成系統→AI智慧輔助系統
+    """頁1:偵查類——3 系統各為獨立 pool 的協作圖(檢察書類製作系統→AI智慧輔助系統
     →刑案管理系統,單向接力鏈:書類PDF經SFTP批次撈取、判讀結果經API寫入暫存區)。"""
     c = Collab("統計標籤判斷_偵查類_工作流程圖", "統計標籤判斷(偵查類)工作流程圖")
 
-    # 階梯式列位(書類生成:0-4、AI:5-9、刑案:10-18),跨 pool 訊息流一律向下
-    # Pool 1:書類生成系統
-    pA = c.add_pool(Proc("pre_pA", "書類生成系統", ["檢察官"]))
+    # 階梯式列位(書類系統:0-4、AI:5-9、刑案:10-18),跨 pool 訊息流一律向下
+    # Pool 1:檢察書類製作系統
+    pA = c.add_pool(Proc("pre_pA", "檢察書類製作系統", ["檢察官"]))
     pA.add("a_s",  "start", "開始", 0, 0)
     pA.add("a_1",  "task",  "完成起訴書或不起訴書", 0, 1, kind="user")
-    pA.add("a_2",  "task",  "執行列印或儲存", 0, 2, kind="user")
+    pA.add("a_2",  "task",  "執行列印或儲存\n(書類列印+核章欄)", 0, 2, kind="user")
     pA.add("a_2b", "task",  "產製書類PDF並拋轉至SFTP", 0, 3, kind="system")
     pA.add("a_ae", "end",   "書類PDF拋轉SFTP", 0, 4)
     pA.add("a_d1", "input", "起訴書/不起訴書PDF", 0)
     pA.assoc("a_d1", "a_2b")
     pA.add("a_n2", "note",
-           "檢察官執行列印/儲存時,由書類生成系統產製書類PDF拋轉至SFTP;AI智慧輔助系統再以批次方式定時撈取判讀(非即時呼叫)", 0)
+           "檢察官執行列印/儲存時,由書類系統產製書類PDF拋轉至SFTP;AI智慧輔助系統再以批次方式定時撈取判讀(非即時呼叫)", 0)
     pA.assoc("a_n2", "a_2b")
     pA.flow("a_s", "a_1"); pA.flow("a_1", "a_2"); pA.flow("a_2", "a_2b"); pA.flow("a_2b", "a_ae")
 
-    # Pool 小腦:書類生成系統拋轉之書類PDF暫存於此 SFTP,供 AI 排程撈取(被動來源)
+    # Pool 小腦:書類系統拋轉之書類PDF暫存於此 SFTP,供 AI 排程撈取(被動來源)
     pXn = c.add_pool(Proc("pre_pXn", "小腦", ["SFTP"]))
-    pXn.add("a_xndb", "database", "書類PDF(書類生成拋轉)", 0, 5)
+    pXn.add("a_xndb", "database", "書類PDF", 0, 5)
+    pXn.add("a_xnote", "note",
+            "書類系統拋轉;檔名：包含偵字案號>>需要請宏碁提供標號邏輯", 0, 6)
+    pXn.assoc("a_xnote", "a_xndb")
 
     # Pool 2:AI智慧輔助系統
     pB = c.add_pool(Proc("pre_pB", "AI智慧輔助系統", ["系統"]))
@@ -80,10 +83,10 @@ def build_pretrial():
     pC.flow("a_8", "a_9"); pC.flow("a_9", "a_10"); pC.flow("a_10", "a_gw")
     pC.flow("a_gw", "a_e", "引用→否", route="sideLeft")
     pC.flow("a_gw", "a_11", "引用→是", route="outRight")
-    pC.flow("a_11", "a_e")
+    pC.flow("a_11", "a_e", route="enterRight")  # 自結束事件右側接入,減少轉折(使用者指示)
 
     # 跨 pool 訊息流(單向接力)
-    c.message("a_ae", "a_xndb", "書類PDF拋轉至SFTP")          # 書類生成→小腦:上傳書類PDF
+    c.message("a_ae", "a_xndb", "書類PDF拋轉至SFTP")          # 書類系統→小腦:上傳書類PDF
     c.message("a_xndb", "a_3", "AI排程撈取、下載書類PDF")     # 小腦→AI:批次下載書類PDF
     c.message("a_ae2", "a_cs", "判讀結果寫入刑案管理系統暫存區")
     # 大腦(SFTP)→AI 下載任務:AI 每日下載部頒代碼表與法條對照表
@@ -99,10 +102,10 @@ def build_execution():
 
     # 階梯式列位(A:0-3、B:4-10、C:11-19),使跨 pool 訊息流一律向下、不倒繞。
     # Pool A:案件管理系統
-    pA = c.add_pool(Proc("exec_pA", "案件管理系統", ["使用者"]))
+    pA = c.add_pool(Proc("exec_pA", "案件管理系統", ["地檢署分案室"]))
     pA.add("b_s",  "start", "開始", 0, 0)
     pA.add("b_1",  "task",  "執行分案", 0, 1, kind="user")
-    pA.add("b_2",  "task",  "傳送執行案號、確認案號、被告姓名、身分證號至AI智慧輔助系統", 0, 2, kind="system")
+    pA.add("b_2",  "task",  "傳送執行案號、確認案號(院方)、被告姓名、身分證號至AI智慧輔助系統", 0, 2, kind="system")
     pA.add("b_ae", "end",   "轉AI智慧輔助系統", 0, 3)
     pA.add("b_n2", "note",
            "使用者於案件管理系統執行分案時,將執行案號、確認案號、被告姓名、身分證號傳給AI智慧輔助系統作為撈取判讀依據", 0)
@@ -164,7 +167,7 @@ def build_execution():
     pC.flow("b_11", "b_12"); pC.flow("b_12", "b_13"); pC.flow("b_13", "b_gw2")
     pC.flow("b_gw2", "b_e", "引用→否", route="sideLeft")  # 否:走左側接入 b_e(與 b_14→b_e 分埠)
     pC.flow("b_gw2", "b_14", "引用→是", route="outRight")  # 是:旁置右子欄
-    pC.flow("b_14", "b_e")
+    pC.flow("b_14", "b_e", route="enterRight")  # 自結束事件右側接入,減少轉折(使用者指示)
 
     # 跨 pool 訊息流(單向接力)
     c.message("b_ae", "b_bs", "案件資料:案號/被告姓名/身分證號")
@@ -177,8 +180,8 @@ def build_execution():
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     emit_multi([build_pretrial(), build_execution()], "統計標籤判斷",
-               outdir, version="V16.01", src=__file__,
-               change="執行類案件管理系統 pool 之工作步驟(執行分案、傳送資料)加虛線群組框,標示「待與開發商討論」",
+               outdir, version="V17.02", src=__file__,
+               change="偵查類系統改名:書類生成系統→檢察書類製作系統(pool 全名;備註/註解縮寫「書類系統」)",
                change_kind="文字", change_source="口頭指示")
 
     # ---- 後處理:跨系統自動介接連線標紅(builder 不支援線色,於輸出檔後製) ----
@@ -239,4 +242,21 @@ if __name__ == "__main__":
                     lambda m: '<path d="%s" fill="none" stroke="%s" stroke-width="2" marker-end="url(#%sR)"/>' % (d, RED, m.group(1)), ht)
     io.open(hpath, "w", encoding="utf-8").write(ht)
     print("檢視器同步標紅完成")
+
+    # ---- 後製:偵查類小腦訊息流(a_ae→a_xndb)垂直段左移 628→540,
+    #      離開書類生成系統 pool 右框線 x630(使用者於 draw.io 手修同步)。
+    #      若日後重排使座標不再是 628,以下取代會 no-op 並顯示 0,屆時重新校準。
+    MF_FIX = [('<mxPoint x="628" y="646"', '<mxPoint x="540" y="646"'),
+              ('<mxPoint x="628" y="766"', '<mxPoint x="540" y="766"'),
+              ("304,646 628,646 628,766", "304,646 540,646 540,766")]
+    for path in (dpath,
+                 os.path.join(vdir, "統計標籤判斷_偵查類_工作流程圖%s.svg" % SUF),
+                 hpath):
+        txt = io.open(path, encoding="utf-8").read()
+        hits = 0
+        for old, new in MF_FIX:
+            hits += txt.count(old)
+            txt = txt.replace(old, new)
+        io.open(path, "w", encoding="utf-8").write(txt)
+        print("小腦訊息流左移(%s): %d 處" % (os.path.basename(path), hits))
     print("done ->", os.path.abspath(outdir))
