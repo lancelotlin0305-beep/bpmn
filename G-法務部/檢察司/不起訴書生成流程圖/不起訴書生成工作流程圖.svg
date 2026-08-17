@@ -1,61 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="檢察官不起訴書生成工作流程圖(含介接說明) V12.01" viewBox="-443 7 2236 3123" data-pad="capped" font-family="Microsoft JhengHei, PingFang TC, Noto Sans CJK TC, sans-serif">
-<title>檢察官不起訴書生成工作流程圖(含介接說明) V12.01</title>
-<rect x="-443" y="7" width="2236" height="3123" fill="#ffffff"/>
-<text x="140" y="50" font-size="19" font-weight="bold" fill="#1f2d3d">檢察官不起訴書生成工作流程圖(含介接說明) V12.01</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="檢察官不起訴書生成工作流程圖(含介接說明) V12.05" viewBox="-443 7 2236 2523" data-pad="capped" font-family="Microsoft JhengHei, PingFang TC, Noto Sans CJK TC, sans-serif">
+<title>檢察官不起訴書生成工作流程圖(含介接說明) V12.05</title>
+<rect x="-443" y="7" width="2236" height="2523" fill="#ffffff"/>
+<text x="140" y="50" font-size="19" font-weight="bold" fill="#1f2d3d">檢察官不起訴書生成工作流程圖(含介接說明) V12.05</text>
 <defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#5a6b7b"/></marker><marker id="mfarr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#6b7b8b" stroke-width="1.3"/></marker><marker id="mfdot" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth"><circle cx="5" cy="5" r="3.2" fill="#fff" stroke="#6b7b8b" stroke-width="1.3"/></marker></defs>
-<rect x="140" y="70" width="490" height="3036" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
-<rect x="140" y="70" width="30" height="3036" fill="#e7edf3" stroke="#9aa7b4"/>
-<text x="158" y="1588.0" font-size="13" font-weight="bold" fill="#3a4a59" text-anchor="middle" transform="rotate(-90 158 1588.0)">書類生成暨漢書系統</text>
-<rect x="170" y="70" width="460" height="3036" fill="none" stroke="#cdd6df"/>
+<rect x="140" y="70" width="490" height="2436" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
+<rect x="140" y="70" width="30" height="2436" fill="#e7edf3" stroke="#9aa7b4"/>
+<text x="158" y="1288.0" font-size="13" font-weight="bold" fill="#3a4a59" text-anchor="middle" transform="rotate(-90 158 1288.0)">檢察書類製作暨漢書系統</text>
+<rect x="170" y="70" width="460" height="2436" fill="none" stroke="#cdd6df"/>
 <rect x="170" y="70" width="460" height="36" fill="#eef2f6" stroke="#cdd6df"/>
 <text x="400.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">檢察官</text>
-<rect x="720" y="70" width="490" height="3036" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
-<rect x="720" y="70" width="30" height="3036" fill="#e7edf3" stroke="#9aa7b4"/>
-<text x="738" y="1588.0" font-size="13" font-weight="bold" fill="#3a4a59" text-anchor="middle" transform="rotate(-90 738 1588.0)">AI智慧輔助系統</text>
-<rect x="750" y="70" width="460" height="3036" fill="none" stroke="#cdd6df"/>
+<rect x="720" y="70" width="490" height="2436" fill="none" stroke="#9aa7b4" stroke-width="1.5"/>
+<rect x="720" y="70" width="30" height="2436" fill="#e7edf3" stroke="#9aa7b4"/>
+<text x="738" y="1288.0" font-size="13" font-weight="bold" fill="#3a4a59" text-anchor="middle" transform="rotate(-90 738 1288.0)">AI智慧輔助系統</text>
+<rect x="750" y="70" width="460" height="2436" fill="none" stroke="#cdd6df"/>
 <rect x="750" y="70" width="460" height="36" fill="#eef2f6" stroke="#cdd6df"/>
 <text x="980.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">AI智慧輔助系統</text>
 <path d="M285,185 L285,253" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M285,319 L285,373" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M285,439 L285,493" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M285,559 L285,627" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M285,2825 L285,2893" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M285,2959 L285,3027" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M364,2926 L494,2926" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M285,2225 L285,2293" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M285,2359 L285,2427" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M364,2326 L494,2326" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
 <path d="M435,526 L364,526" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M435,3046 L304,3046" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M865,785 L865,1093" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M865,1159 L865,1453" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M435,2446 L304,2446" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M865,665 L865,853" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M865,919 L865,1093" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M865,1159 L865,1213" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M865,1279 L865,1333" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M865,1399 L865,1453" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M865,1519 L865,1573" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M865,1639 L865,1693" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M865,1759 L865,1813" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M865,1879 L865,1933" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M865,1999 L865,2053" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M865,2119 L865,2173" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M865,2239 L865,2293" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M865,2359 L865,2413" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M865,2479 L865,2547" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M944,2206 L1074,2206" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M1074,1126 L944,1126" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M1074,1006 L1009,1006 L1009,1106 L944,1106" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M1074,1246 L1009,1246 L1009,1146 L944,1146" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<path d="M1015,2446 L944,2446" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
-<polyline points="304,646 575,646 575,766 846,766" fill="none" stroke="#6b7b8b" stroke-width="1.4" stroke-dasharray="6 4" marker-start="url(#mfdot)" marker-end="url(#mfarr)"/>
+<path d="M865,2119 L865,2187" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M944,1846 L1074,1846" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M1074,886 L944,886" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M1074,766 L1009,766 L1009,866 L944,866" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M1074,1006 L1009,1006 L1009,906 L944,906" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<path d="M1015,2086 L944,2086" fill="none" stroke="#8a99a8" stroke-width="1.4" stroke-dasharray="2,4"/>
+<polyline points="304,646 575,646 575,646 846,646" fill="none" stroke="#6b7b8b" stroke-width="1.4" stroke-dasharray="6 4" marker-start="url(#mfdot)" marker-end="url(#mfarr)"/>
 <rect x="412.65" y="630.0" width="16" height="11" fill="#ffffff" stroke="#6b7b8b" stroke-width="1.2"/>
 <path d="M412.65,630.0 L420.65,636.0 L428.65,630.0" fill="none" stroke="#6b7b8b" stroke-width="1.2"/>
 <rect x="428.65" y="628.0" width="103" height="19" fill="#fff" stroke="#d7dee6" rx="3"/>
 <text x="480.15" y="642.0" font-size="11.5" fill="#52606d" text-anchor="middle">個案資料/案號</text>
-<polyline points="846,2566 575,2566 575,2806 304,2806" fill="none" stroke="#6b7b8b" stroke-width="1.4" stroke-dasharray="6 4" marker-start="url(#mfdot)" marker-end="url(#mfarr)"/>
-<rect x="595.85" y="2550.0" width="16" height="11" fill="#ffffff" stroke="#6b7b8b" stroke-width="1.2"/>
-<path d="M595.85,2550.0 L603.85,2556.0 L611.85,2550.0" fill="none" stroke="#6b7b8b" stroke-width="1.2"/>
-<rect x="611.85" y="2548.0" width="116" height="19" fill="#fff" stroke="#d7dee6" rx="3"/>
-<text x="669.85" y="2562.0" font-size="11.5" fill="#52606d" text-anchor="middle">不起訴書草稿內文</text>
+<polyline points="846,2206 575,2206 575,2206 304,2206" fill="none" stroke="#6b7b8b" stroke-width="1.4" stroke-dasharray="6 4" marker-start="url(#mfdot)" marker-end="url(#mfarr)"/>
+<rect x="595.85" y="2190.0" width="16" height="11" fill="#ffffff" stroke="#6b7b8b" stroke-width="1.2"/>
+<path d="M595.85,2190.0 L603.85,2196.0 L611.85,2190.0" fill="none" stroke="#6b7b8b" stroke-width="1.2"/>
+<rect x="611.85" y="2188.0" width="116" height="19" fill="#fff" stroke="#d7dee6" rx="3"/>
+<text x="669.85" y="2202.0" font-size="11.5" fill="#52606d" text-anchor="middle">不起訴書草稿內文</text>
 <circle cx="285.0" cy="166.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
 <text x="285.0" y="197" font-size="11.5" fill="#2a3a49" text-anchor="middle">開始</text>
 <rect x="206" y="253" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
 <circle cx="218" cy="263" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
 <path d="M213,272 Q218,266 223,272" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="285.0" y="290.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">登錄書類生成系統</text>
+<text x="285.0" y="290.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">登錄書類系統</text>
 <rect x="206" y="373" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
 <circle cx="218" cy="383" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
 <path d="M213,392 Q218,386 223,392" fill="none" stroke="#82b366" stroke-width="1.3"/>
@@ -63,105 +63,108 @@
 <rect x="206" y="493" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
 <circle cx="218" cy="504" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
 <path d="M218,504 l6.5,0.0 M218,504 l-6.5,0.0 M218,504 l0.0,6.5 M218,504 l0.0,-6.5 M218,504 l4.5954999999999995,4.5954999999999995 M218,504 l-4.5954999999999995,4.5954999999999995 M218,504 l4.5954999999999995,-4.5954999999999995 M218,504 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="285.0" y="522.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">由書類生成系統連線AI</text>
-<text x="285.0" y="537.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">智慧輔助系統</text>
+<text x="285.0" y="522.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">由書類系統連線AI智慧</text>
+<text x="285.0" y="537.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">輔助系統</text>
 <circle cx="285.0" cy="646.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
 <text x="285.0" y="677" font-size="11.5" fill="#2a3a49" text-anchor="middle">轉AI智慧輔</text>
 <text x="285.0" y="690" font-size="11.5" fill="#2a3a49" text-anchor="middle">助系統</text>
-<circle cx="285.0" cy="2806.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
-<text x="285.0" y="2837" font-size="11.5" fill="#2a3a49" text-anchor="middle">AI回傳草稿</text>
-<rect x="206" y="2893" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="218" cy="2903" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M213,2912 Q218,2906 223,2912" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="285.0" y="2922.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">複製內文或下載後匯入漢</text>
-<text x="285.0" y="2937.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">書系統</text>
-<circle cx="285.0" cy="3046.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
-<text x="285.0" y="3077" font-size="11.5" fill="#2a3a49" text-anchor="middle">完成</text>
-<path d="M494,2900 L526,2900 L536,2910 L536,2952 L494,2952 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M526,2900 L526,2910 L536,2910" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M501,2913 L511,2913 L511,2909 L518,2915 L511,2921 L511,2917 L501,2917 Z" fill="#5a6b7b" stroke="#5a6b7b" stroke-width="1.2"/>
-<text x="515.0" y="2964" font-size="11.5" fill="#2a3a49" text-anchor="middle">不起訴書(定</text>
-<text x="515.0" y="2977" font-size="11.5" fill="#2a3a49" text-anchor="middle">稿)</text>
-<path d="M447,483 L435,483 L435,569 L447,569" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<text x="451" y="502.0" font-size="11.5" fill="#3a4a59">書類生成系統須與AI智</text>
-<text x="451" y="516.0" font-size="11.5" fill="#3a4a59">慧輔助系統完成帳號驗證</text>
-<text x="451" y="530.0" font-size="11.5" fill="#3a4a59">,並同時傳遞個案資料與</text>
-<text x="451" y="544.0" font-size="11.5" fill="#3a4a59">個案案號至AI智慧輔助</text>
-<text x="451" y="558.0" font-size="11.5" fill="#3a4a59">系統</text>
-<path d="M447,3017 L435,3017 L435,3075 L447,3075" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<text x="451" y="3036.0" font-size="11.5" fill="#3a4a59">應以標準化介接直接匯入</text>
-<text x="451" y="3050.0" font-size="11.5" fill="#3a4a59">書類系統(現行人工匯入</text>
-<text x="451" y="3064.0" font-size="11.5" fill="#3a4a59">)</text>
-<circle cx="865.0" cy="766.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
-<text x="865.0" y="797" font-size="11.5" fill="#2a3a49" text-anchor="middle">接收書類系統</text>
-<text x="865.0" y="810" font-size="11.5" fill="#2a3a49" text-anchor="middle">個案資料</text>
+<circle cx="285.0" cy="2206.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
+<text x="285.0" y="2237" font-size="11.5" fill="#2a3a49" text-anchor="middle">AI回傳草稿</text>
+<rect x="206" y="2293" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="218" cy="2303" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M213,2312 Q218,2306 223,2312" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="285.0" y="2322.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">複製內文或下載後匯入漢</text>
+<text x="285.0" y="2337.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">書系統</text>
+<circle cx="285.0" cy="2446.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
+<text x="285.0" y="2477" font-size="11.5" fill="#2a3a49" text-anchor="middle">完成</text>
+<path d="M494,2300 L526,2300 L536,2310 L536,2352 L494,2352 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M526,2300 L526,2310 L536,2310" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M501,2313 L511,2313 L511,2309 L518,2315 L511,2321 L511,2317 L501,2317 Z" fill="#5a6b7b" stroke="#5a6b7b" stroke-width="1.2"/>
+<text x="515.0" y="2364" font-size="11.5" fill="#2a3a49" text-anchor="middle">不起訴書(定</text>
+<text x="515.0" y="2377" font-size="11.5" fill="#2a3a49" text-anchor="middle">稿)</text>
+<path d="M447,490 L435,490 L435,562 L447,562" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<text x="451" y="509.0" font-size="11.5" fill="#3a4a59">書類系統須與AI智慧輔</text>
+<text x="451" y="523.0" font-size="11.5" fill="#3a4a59">助系統完成帳號驗證,並</text>
+<text x="451" y="537.0" font-size="11.5" fill="#3a4a59">同時傳遞個案資料與個案</text>
+<text x="451" y="551.0" font-size="11.5" fill="#3a4a59">案號至AI智慧輔助系統</text>
+<path d="M447,2417 L435,2417 L435,2475 L447,2475" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<text x="451" y="2436.0" font-size="11.5" fill="#3a4a59">應以標準化介接直接匯入</text>
+<text x="451" y="2450.0" font-size="11.5" fill="#3a4a59">書類系統(現行人工匯入</text>
+<text x="451" y="2464.0" font-size="11.5" fill="#3a4a59">)</text>
+<circle cx="865.0" cy="646.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="1.8"/>
+<text x="865.0" y="677" font-size="11.5" fill="#2a3a49" text-anchor="middle">接收書類系統</text>
+<text x="865.0" y="690" font-size="11.5" fill="#2a3a49" text-anchor="middle">個案資料</text>
+<rect x="786" y="853" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="798" cy="863" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M793,872 Q798,866 803,872" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="865.0" y="882.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">匯入卷證資料、移送書、</text>
+<text x="865.0" y="897.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">偵訊筆錄與警詢筆錄</text>
 <rect x="786" y="1093" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
 <circle cx="798" cy="1103" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
 <path d="M793,1112 Q798,1106 803,1112" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="865.0" y="1122.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">匯入卷證資料、移送書、</text>
-<text x="865.0" y="1137.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">偵訊筆錄與警詢筆錄</text>
+<text x="865.0" y="1122.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">明確指定書類類型(不起</text>
+<text x="865.0" y="1137.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">訴書)</text>
+<rect x="786" y="1213" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="798" cy="1224" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M798,1224 l6.5,0.0 M798,1224 l-6.5,0.0 M798,1224 l0.0,6.5 M798,1224 l0.0,-6.5 M798,1224 l4.5954999999999995,4.5954999999999995 M798,1224 l-4.5954999999999995,4.5954999999999995 M798,1224 l4.5954999999999995,-4.5954999999999995 M798,1224 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="865.0" y="1242.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">依案件類型自動選用書類</text>
+<text x="865.0" y="1257.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">範本</text>
+<rect x="786" y="1333" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="798" cy="1344" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M798,1344 l6.5,0.0 M798,1344 l-6.5,0.0 M798,1344 l0.0,6.5 M798,1344 l0.0,-6.5 M798,1344 l4.5954999999999995,4.5954999999999995 M798,1344 l-4.5954999999999995,4.5954999999999995 M798,1344 l4.5954999999999995,-4.5954999999999995 M798,1344 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="865.0" y="1362.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統主動詢</text>
+<text x="865.0" y="1377.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">問不起訴原因</text>
 <rect x="786" y="1453" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
 <circle cx="798" cy="1463" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
 <path d="M793,1472 Q798,1466 803,1472" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="865.0" y="1482.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">明確指定書類類型(不起</text>
-<text x="865.0" y="1497.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">訴書)</text>
+<text x="865.0" y="1490.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">輸入不起訴原因</text>
 <rect x="786" y="1573" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
 <circle cx="798" cy="1584" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
 <path d="M798,1584 l6.5,0.0 M798,1584 l-6.5,0.0 M798,1584 l0.0,6.5 M798,1584 l0.0,-6.5 M798,1584 l4.5954999999999995,4.5954999999999995 M798,1584 l-4.5954999999999995,4.5954999999999995 M798,1584 l4.5954999999999995,-4.5954999999999995 M798,1584 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="865.0" y="1602.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">依案件類型自動選用書類</text>
-<text x="865.0" y="1617.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">範本</text>
-<rect x="786" y="1693" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<circle cx="798" cy="1704" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
-<path d="M798,1704 l6.5,0.0 M798,1704 l-6.5,0.0 M798,1704 l0.0,6.5 M798,1704 l0.0,-6.5 M798,1704 l4.5954999999999995,4.5954999999999995 M798,1704 l-4.5954999999999995,4.5954999999999995 M798,1704 l4.5954999999999995,-4.5954999999999995 M798,1704 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="865.0" y="1722.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統主動詢</text>
-<text x="865.0" y="1737.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">問不起訴原因</text>
-<rect x="786" y="1813" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="798" cy="1823" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M793,1832 Q798,1826 803,1832" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="865.0" y="1850.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">輸入不起訴原因</text>
-<rect x="786" y="1933" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<circle cx="798" cy="1944" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
-<path d="M798,1944 l6.5,0.0 M798,1944 l-6.5,0.0 M798,1944 l0.0,6.5 M798,1944 l0.0,-6.5 M798,1944 l4.5954999999999995,4.5954999999999995 M798,1944 l-4.5954999999999995,4.5954999999999995 M798,1944 l4.5954999999999995,-4.5954999999999995 M798,1944 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="865.0" y="1962.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統詢問適</text>
-<text x="865.0" y="1977.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">用法規條款(條/款)</text>
+<text x="865.0" y="1602.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統詢問適</text>
+<text x="865.0" y="1617.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">用法規條款(條/款)</text>
+<rect x="786" y="1693" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="798" cy="1703" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M793,1712 Q798,1706 803,1712" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="865.0" y="1730.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">選擇適用法規條款</text>
+<rect x="786" y="1813" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<circle cx="798" cy="1824" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
+<path d="M798,1824 l6.5,0.0 M798,1824 l-6.5,0.0 M798,1824 l0.0,6.5 M798,1824 l0.0,-6.5 M798,1824 l4.5954999999999995,4.5954999999999995 M798,1824 l-4.5954999999999995,4.5954999999999995 M798,1824 l4.5954999999999995,-4.5954999999999995 M798,1824 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
+<text x="865.0" y="1842.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統生成不</text>
+<text x="865.0" y="1857.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">起訴書草稿</text>
+<rect x="786" y="1933" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<circle cx="798" cy="1943" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<path d="M793,1952 Q798,1946 803,1952" fill="none" stroke="#82b366" stroke-width="1.3"/>
+<text x="865.0" y="1970.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">檢視草稿內容</text>
 <rect x="786" y="2053" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
 <circle cx="798" cy="2063" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
 <path d="M793,2072 Q798,2066 803,2072" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="865.0" y="2090.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">選擇適用法規條款</text>
-<rect x="786" y="2173" width="158" height="66" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<circle cx="798" cy="2184" r="4" fill="none" stroke="#6c8ebf" stroke-width="1.3"/>
-<path d="M798,2184 l6.5,0.0 M798,2184 l-6.5,0.0 M798,2184 l0.0,6.5 M798,2184 l0.0,-6.5 M798,2184 l4.5954999999999995,4.5954999999999995 M798,2184 l-4.5954999999999995,4.5954999999999995 M798,2184 l4.5954999999999995,-4.5954999999999995 M798,2184 l-4.5954999999999995,-4.5954999999999995 " stroke="#6c8ebf" stroke-width="1.3" fill="none"/>
-<text x="865.0" y="2202.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">AI智慧輔助系統生成不</text>
-<text x="865.0" y="2217.5" font-size="12.5" fill="#1f2d3d" text-anchor="middle">起訴書草稿</text>
-<rect x="786" y="2293" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="798" cy="2303" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M793,2312 Q798,2306 803,2312" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="865.0" y="2330.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">檢視草稿內容</text>
-<rect x="786" y="2413" width="158" height="66" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<circle cx="798" cy="2423" r="3.2" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<path d="M793,2432 Q798,2426 803,2432" fill="none" stroke="#82b366" stroke-width="1.3"/>
-<text x="865.0" y="2450.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">直接調整草稿內文</text>
-<circle cx="865.0" cy="2566.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
-<text x="865.0" y="2597" font-size="11.5" fill="#2a3a49" text-anchor="middle">回傳漢書系統</text>
-<path d="M1074,2180 L1106,2180 L1116,2190 L1116,2232 L1074,2232 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M1106,2180 L1106,2190 L1116,2190" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M1081,2193 L1091,2193 L1091,2189 L1098,2195 L1091,2201 L1091,2197 L1081,2197 Z" fill="#5a6b7b" stroke="#5a6b7b" stroke-width="1.2"/>
-<text x="1095.0" y="2244" font-size="11.5" fill="#2a3a49" text-anchor="middle">不起訴書草稿</text>
-<path d="M1074,1100 L1106,1100 L1116,1110 L1116,1152 L1074,1152 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M1106,1100 L1106,1110 L1116,1110" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M1081,1113 L1091,1113 L1091,1109 L1098,1115 L1091,1121 L1091,1117 L1081,1117 Z" fill="none" stroke="#5a6b7b" stroke-width="1.2"/>
-<text x="1095.0" y="1164" font-size="11.5" fill="#2a3a49" text-anchor="middle">移送書</text>
+<text x="865.0" y="2090.0" font-size="12.5" fill="#1f2d3d" text-anchor="middle">直接調整草稿內文</text>
+<circle cx="865.0" cy="2206.0" r="19.0" fill="#f8cecc" stroke="#b85450" stroke-width="3.2"/>
+<text x="865.0" y="2237" font-size="11.5" fill="#2a3a49" text-anchor="middle">回傳漢書系統</text>
+<path d="M1074,1820 L1106,1820 L1116,1830 L1116,1872 L1074,1872 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M1106,1820 L1106,1830 L1116,1830" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M1081,1833 L1091,1833 L1091,1829 L1098,1835 L1091,1841 L1091,1837 L1081,1837 Z" fill="#5a6b7b" stroke="#5a6b7b" stroke-width="1.2"/>
+<text x="1095.0" y="1884" font-size="11.5" fill="#2a3a49" text-anchor="middle">不起訴書草稿</text>
+<path d="M1074,860 L1106,860 L1116,870 L1116,912 L1074,912 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M1106,860 L1106,870 L1116,870" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M1081,873 L1091,873 L1091,869 L1098,875 L1091,881 L1091,877 L1081,877 Z" fill="none" stroke="#5a6b7b" stroke-width="1.2"/>
+<text x="1095.0" y="924" font-size="11.5" fill="#2a3a49" text-anchor="middle">移送書(fr</text>
+<text x="1095.0" y="937" font-size="11.5" fill="#2a3a49" text-anchor="middle">om案管系統</text>
+<text x="1095.0" y="950" font-size="11.5" fill="#2a3a49" text-anchor="middle">)</text>
+<path d="M1074,740 L1106,740 L1116,750 L1116,792 L1074,792 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M1106,740 L1106,750 L1116,750" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<path d="M1081,753 L1091,753 L1091,749 L1098,755 L1091,761 L1091,757 L1081,757 Z" fill="none" stroke="#5a6b7b" stroke-width="1.2"/>
+<text x="1095.0" y="804" font-size="11.5" fill="#2a3a49" text-anchor="middle">偵訊筆錄(f</text>
+<text x="1095.0" y="817" font-size="11.5" fill="#2a3a49" text-anchor="middle">rom筆錄系</text>
+<text x="1095.0" y="830" font-size="11.5" fill="#2a3a49" text-anchor="middle">統)</text>
 <path d="M1074,980 L1106,980 L1116,990 L1116,1032 L1074,1032 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
 <path d="M1106,980 L1106,990 L1116,990" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
 <path d="M1081,993 L1091,993 L1091,989 L1098,995 L1091,1001 L1091,997 L1081,997 Z" fill="none" stroke="#5a6b7b" stroke-width="1.2"/>
-<text x="1095.0" y="1044" font-size="11.5" fill="#2a3a49" text-anchor="middle">偵訊筆錄</text>
-<path d="M1074,1220 L1106,1220 L1116,1230 L1116,1272 L1074,1272 Z" fill="#ffffff" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M1106,1220 L1106,1230 L1116,1230" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<path d="M1081,1233 L1091,1233 L1091,1229 L1098,1235 L1091,1241 L1091,1237 L1081,1237 Z" fill="none" stroke="#5a6b7b" stroke-width="1.2"/>
-<text x="1095.0" y="1284" font-size="11.5" fill="#2a3a49" text-anchor="middle">警詢筆錄</text>
-<path d="M1027,2410 L1015,2410 L1015,2482 L1027,2482" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
-<text x="1031" y="2429.0" font-size="11.5" fill="#3a4a59">檢視與調整之編修結果應</text>
-<text x="1031" y="2443.0" font-size="11.5" fill="#3a4a59">回饋自動Fine-tu</text>
-<text x="1031" y="2457.0" font-size="11.5" fill="#3a4a59">ning機制,持續優化</text>
-<text x="1031" y="2471.0" font-size="11.5" fill="#3a4a59">模型</text>
+<text x="1095.0" y="1044" font-size="11.5" fill="#2a3a49" text-anchor="middle">警詢筆錄</text>
+<path d="M1027,2050 L1015,2050 L1015,2122 L1027,2122" fill="none" stroke="#5a6b7b" stroke-width="1.4"/>
+<text x="1031" y="2069.0" font-size="11.5" fill="#3a4a59">檢視與調整之編修結果應</text>
+<text x="1031" y="2083.0" font-size="11.5" fill="#3a4a59">回饋自動Fine-tu</text>
+<text x="1031" y="2097.0" font-size="11.5" fill="#3a4a59">ning機制,持續優化</text>
+<text x="1031" y="2111.0" font-size="11.5" fill="#3a4a59">模型</text>
 </svg>
