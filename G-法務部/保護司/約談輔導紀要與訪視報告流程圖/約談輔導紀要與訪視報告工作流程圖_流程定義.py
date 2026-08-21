@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""約談輔導紀要與訪視報告工作流程圖(保護司)— 多頁專案 V03.00
+"""約談輔導紀要與訪視報告工作流程圖(保護司)— 多頁專案 V03.01
 頁籤1:AI觀護助理系統流程(沿用 V02.00,跨系統自動介接連線紅色)
 頁籤2:現行工作流程(未導入AI):訪談不錄音,訪談後回觀護案件管理作業系統
        登打約談輔導紀要/訪視報告並建立處遇建議
@@ -10,7 +10,7 @@ import io, sys, os, re
 sys.path.insert(0, r"D:\claude-skills-marketplace\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit_multi
 
-VERSION = "V03.00"
+VERSION = "V03.01"
 PROJECT = "約談輔導紀要與訪視報告工作流程圖"
 # 跨系統自動介接連線(上紅色,僅頁籤1 AI 圖):(source, target)
 RED_FLOWS = [
@@ -31,7 +31,9 @@ def build_ai():
     p.add("open",  "task",    "開啟觀護案件管理作業系統",          0, kind="user")
     p.add("query", "task",    "於受保護管束人再犯風險評估\n智慧輔助系統查詢個案資料", 0, kind="user")
     p.add("load",  "task",    "導引至AI觀護助理系統\n帶入個案資料(含獄政等資料)(M9)", 0, kind="system")
-    p.add("gw1",   "gateway", "訪談方式",                       0)
+    # dx=460:閘道右移兩子欄對齊 load/visit 中欄,主線 load→gw1→visit 直下 0 轉折
+    # (自動佈局的蛇行子欄把獨佔一列的閘道排到 sub0,與上下游左右錯開)
+    p.add("gw1",   "gateway", "訪談方式",                       0, dx=460)
     p.add("come",  "task",    "至地檢接受約談",                  1)
     p.add("visit", "task",    "出訪至被觀護人所在地",             0, kind="user")
     p.add("recv",  "task",    "於所在地接受訪視",                1)
@@ -189,11 +191,10 @@ if __name__ == "__main__":
     cur = build_cur()
     emit_multi([ai, cur], PROJECT, outdir, version=VERSION, src=__file__,
                xml=True, svg=True, viewer=True,
-               change="新增頁籤2「現行工作流程(未導入AI)」:訪談方式分流同前,"
-                      "現行不錄音,訪談後於受保護管束人再犯風險評估智慧輔助系統"
-                      "登打約談輔導紀要/訪視報告並建立處遇建議,自動回存至"
-                      "觀護案件管理作業系統後結束;既有AI流程改為多頁專案頁籤1",
-               change_kind="結構", change_source="口頭指示")
+               change="頁1「訪談方式」閘道 dx 右移對齊中欄:主線 導引至AI觀護助理"
+                      "系統→訪談方式→出訪至被觀護人所在地 直下 0 轉折,"
+                      "不再左右錯開(頁2 本已同欄直下,不動)",
+               change_kind="文字", change_source="口頭指示")
     # 依 git 版控模式決定 paint_red 讀取路徑與檔名版號後綴
     if _git_mode(outdir):
         paint_red(ai, outdir, "")
