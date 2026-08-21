@@ -7,7 +7,7 @@
 執行: python 本檔 [輸出資料夾]
 """
 import io, sys, os, re
-sys.path.insert(0, r"C:\Users\User\.claude\plugins\marketplaces\lancelot-skills\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
+sys.path.insert(0, r"D:\claude-skills-marketplace\plugins\geo-bpmn-flow-builder\skills\geo-bpmn-flow-builder\scripts")
 from bpmn_builder import Proc, emit_multi
 
 VERSION = "V03.00"

@@ -14,9 +14,9 @@
 <text x="860.0" y="93" font-size="13.5" font-weight="bold" fill="#3a4a59" text-anchor="middle">被觀護人</text>
 <path d="M285,185 L285,253" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <path d="M285,319 L285,380" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<path d="M311,406 L1076,406 L1076,646 L939,646" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
-<rect x="753.25" y="387.0" width="110" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
-<text x="808.25" y="402.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">被觀護人到地檢</text>
+<path d="M311,406 L979,406 L979,646 L939,646" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="690.2" y="387.0" width="110" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
+<text x="745.2" y="402.0" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">被觀護人到地檢</text>
 <path d="M285,432 L285,493" fill="none" stroke="#5a6b7b" stroke-width="1.6" marker-end="url(#arr)"/>
 <rect x="254.0" y="443" width="82" height="21" fill="#fff" stroke="#cdd6df" rx="3"/>
 <text x="295.0" y="458" font-size="12.5" fill="#b0451f" text-anchor="middle" font-weight="bold">觀護人出訪</text>

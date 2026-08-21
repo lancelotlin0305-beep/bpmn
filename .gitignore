@@ -8,3 +8,4 @@ __pycache__/
 # draw.io 開啟時的暫存/備份鎖檔
 .$*.drawio.bkp
 .$*.bkp
+.$*.dtmp
