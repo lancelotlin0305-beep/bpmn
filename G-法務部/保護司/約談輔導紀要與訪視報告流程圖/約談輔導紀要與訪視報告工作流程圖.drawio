@@ -1,357 +1,329 @@
-<mxfile host="Electron" pages="2">
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="bpmn-flow-builder">
   <diagram id="d1" name="約談輔導紀要與訪視報告工作流程圖(AI觀護助理)">
-    <mxGraphModel dx="1768" dy="1051" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="dio_title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" value="約談輔導紀要與訪視報告工作流程圖(AI觀護助理) V03.01" vertex="1">
-          <mxGeometry height="28" width="570" x="140" y="22" as="geometry" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="dio_title" value="約談輔導紀要與訪視報告工作流程圖(AI觀護助理) V04.01" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
+          <mxGeometry x="140" y="22" width="570" height="28" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pool_0" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="1476" width="1180" x="140" y="70" as="geometry" />
+        <mxCell id="dio_pool_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="140" y="70" width="490" height="2556" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pooltitle_0" parent="1" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" value="約談輔導紀要與訪視報告工作流程圖(AI觀護助理)" vertex="1">
-          <mxGeometry height="1476" width="30" x="140" y="70" as="geometry" />
+        <mxCell id="dio_pooltitle_0" value="受保護管束人再犯風險評估智慧輔助系統" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" vertex="1" parent="1">
+          <mxGeometry x="140" y="70" width="30" height="2556" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_hdrline_0" parent="1" style="rounded=0;html=1;fillColor=#8a99a8;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="1" width="1150" x="170" y="106" as="geometry" />
+        <mxCell id="dio_hdrline_0" value="" style="rounded=0;html=1;fillColor=#8a99a8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="106" width="460" height="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lane_0_0" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" value="" vertex="1">
-          <mxGeometry height="1476" width="690" x="170" y="70" as="geometry" />
+        <mxCell id="dio_lane_0_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
+          <mxGeometry x="170" y="70" width="460" height="2556" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_0_0" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" value="觀護人" vertex="1">
-          <mxGeometry height="36" width="690" x="170" y="70" as="geometry" />
+        <mxCell id="dio_lanehdr_0_0" value="觀護人" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+          <mxGeometry x="170" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lane_0_1" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" value="" vertex="1">
-          <mxGeometry height="1476" width="460" x="860" y="70" as="geometry" />
+        <mxCell id="dio_pool_1" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="70" width="490" height="2556" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_0_1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" value="被觀護人" vertex="1">
-          <mxGeometry height="36" width="460" x="860" y="70" as="geometry" />
+        <mxCell id="dio_pooltitle_1" value="AI觀護助理系統" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" vertex="1" parent="1">
+          <mxGeometry x="720" y="70" width="30" height="2556" as="geometry"/>
         </mxCell>
-        <mxCell id="s" parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" value="開始" vertex="1">
-          <mxGeometry height="38" width="38" x="266" y="147" as="geometry" />
+        <mxCell id="dio_hdrline_1" value="" style="rounded=0;html=1;fillColor=#8a99a8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="750" y="106" width="460" height="1" as="geometry"/>
         </mxCell>
-        <mxCell id="open" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="開啟觀護案件管理作業系統" vertex="1">
-          <mxGeometry height="66" width="158" x="436" y="133" as="geometry" />
+        <mxCell id="dio_lane_1_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
+          <mxGeometry x="750" y="70" width="460" height="2556" as="geometry"/>
         </mxCell>
-        <mxCell id="query" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="於受保護管束人再犯風險評估&#xa;智慧輔助系統查詢個案資料" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="133" as="geometry" />
+        <mxCell id="dio_lanehdr_1_0" value="觀護人" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+          <mxGeometry x="750" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
-        <mxCell id="load" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="導引至AI觀護助理系統&#xa;帶入個案資料(含獄政等資料)(M9)" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="253" as="geometry" />
+        <mxCell id="s" value="開始" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="381" y="147" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="gw1" parent="1" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="訪談方式" vertex="1">
-          <mxGeometry height="52" width="52" x="719" y="380" as="geometry" />
+        <mxCell id="open" value="開啟觀護案件管理作業系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="321" y="253" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="come" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" value="至地檢接受約談" vertex="1">
-          <mxGeometry height="66" width="158" x="1130" y="613" as="geometry" />
+        <mxCell id="query" value="於受保護管束人再犯風險評估&#xa;智慧輔助系統查詢個案資料" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="321" y="373" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="visit" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="出訪至被觀護人所在地" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="493" as="geometry" />
+        <mxCell id="b1" value="導引至AI觀護助理系統&#xa;帶入個案資料(含獄政等資料)" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="321" y="493" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="recv" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" value="於所在地接受訪視" vertex="1">
-          <mxGeometry height="66" width="158" x="911" y="613" as="geometry" />
+        <mxCell id="x1" value="轉AI觀護助理系統" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
+          <mxGeometry x="381" y="627" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="itv" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="進行訪談並全程錄音(M5-02)" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="733" as="geometry" />
+        <mxCell id="b3" value="接收個案報告資料" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="381" y="2187" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="rec" parent="1" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" value="錄音檔" vertex="1">
-          <mxGeometry height="52" width="42" x="494" y="740" as="geometry" />
+        <mxCell id="b4" value="個案報告存檔" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="321" y="2293" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="up" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="上傳錄音檔至&#xa;AI觀護助理系統(M5-02)" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="853" as="geometry" />
+        <mxCell id="b5" value="自動回存至&#xa;個案管理作業系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="321" y="2413" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="stt" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="語音轉逐字稿(M6-01)" vertex="1">
-          <mxGeometry height="66" width="158" x="436" y="853" as="geometry" />
+        <mxCell id="b6" value="完成" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
+          <mxGeometry x="381" y="2547" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="fix" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="AI順稿(M7-02)" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="853" as="geometry" />
+        <mxCell id="a0" value="接收個案資料&#xa;(含獄政等資料)" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="846" y="627" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="gen" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="生成約談輔導紀要&#xa;或訪視報告(M7-02/M7-03)" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="973" as="geometry" />
+        <mxCell id="gw1" value="訪談方式" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="839" y="740" width="52" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="doc" parent="1" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" value="約談輔導紀要/&#xa;訪視報告" vertex="1">
-          <mxGeometry height="52" width="42" x="1069" y="980" as="geometry" />
+        <mxCell id="visit" value="出訪至被觀護人所在地" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="786" y="853" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="plan" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="產出風險評估與&#xa;處遇建議(M7-02)" vertex="1">
-          <mxGeometry height="66" width="158" x="436" y="973" as="geometry" />
+        <mxCell id="itv" value="進行訪談並全程錄音" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="786" y="973" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="pdoc" parent="1" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" value="風險評估與&#xa;處遇建議" vertex="1">
-          <mxGeometry height="52" width="42" x="264" y="980" as="geometry" />
+        <mxCell id="rec" value="錄音檔" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="1074" y="980" width="42" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="n1" parent="1" style="fillColor=none;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="72" width="160" x="1010" y="1090" as="geometry" />
+        <mxCell id="up" value="上傳錄音檔至&#xa;AI觀護助理系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="786" y="1093" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="n1__br" parent="1" style="shape=mxgraph.flowchart.annotation_2;html=1;strokeColor=#5a6b7b;fillColor=none;" value="" vertex="1">
-          <mxGeometry height="72" width="12" x="1010" y="1090" as="geometry" />
+        <mxCell id="a2" value="語音轉逐字稿" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="1213" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="n1__tx" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" value="M7-02 標準Prompt模板:約談輔導紀要、&#xa;訪視報告、風險評估與處遇建議" vertex="1">
-          <mxGeometry height="72" width="142" x="1028" y="1090" as="geometry" />
+        <mxCell id="a3" value="AI順稿" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="1333" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="rev" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="觀護人審閱報告與處遇建議" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="1093" as="geometry" />
+        <mxCell id="a4" value="生成約談輔導紀要&#xa;或訪視報告" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="1453" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="gw2" parent="1" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="無誤?" vertex="1">
-          <mxGeometry height="52" width="52" x="719" y="1220" as="geometry" />
+        <mxCell id="doc" value="約談輔導紀要/&#xa;訪視報告" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="1074" y="1460" width="42" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="edit" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="以報告智慧編輯器修改(M5-03)" vertex="1">
-          <mxGeometry height="66" width="158" x="666" y="1453" as="geometry" />
+        <mxCell id="a5" value="產出風險評估與&#xa;處遇建議" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="1573" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="wb" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="回填受保護管束人再犯風險評估&#xa;智慧輔助系統存檔(M12-01)" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="1333" as="geometry" />
+        <mxCell id="pdoc" value="風險評估與&#xa;處遇建議" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="1074" y="1580" width="42" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="sync" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="回存至觀護案件管理作業系統(M12-01)" vertex="1">
-          <mxGeometry height="66" width="158" x="436" y="1333" as="geometry" />
+        <mxCell id="n1" value="" style="fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="1697" width="160" height="58" as="geometry"/>
         </mxCell>
-        <mxCell id="e" parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" value="結束本次訪談" vertex="1">
-          <mxGeometry height="38" width="38" x="726" y="1347" as="geometry" />
+        <mxCell id="n1__br" value="" style="shape=mxgraph.flowchart.annotation_2;html=1;strokeColor=#5a6b7b;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="1697" width="12" height="58" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_1" edge="1" parent="1" source="s" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="open" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="n1__tx" value="標準Prompt模板:約談輔導紀要、&#xa;訪視報告、風險評估與處遇建議" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3a4a59;" vertex="1" parent="1">
+          <mxGeometry x="1033" y="1697" width="142" height="58" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_2" edge="1" parent="1" source="open" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="query" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="rev" value="觀護人審閱報告與處遇建議" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="786" y="1693" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_3" edge="1" parent="1" source="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#cc0000;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="load" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="gw2" value="無誤?" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="839" y="1820" width="52" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_4" edge="1" parent="1" source="load" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="gw1" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="edit" value="以報告智慧編輯器修改" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1016" y="1933" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_5" edge="1" parent="1" source="gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="come" value="被觀護人到地檢">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1209" y="406" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="a8" value="回填受保護管束人再犯風險評估&#xa;智慧輔助系統存檔" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="786" y="2053" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_6" edge="1" parent="1" source="gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="visit" value="觀護人出訪">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="a9" value="轉風險評估智慧輔助系統" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
+          <mxGeometry x="846" y="2187" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_7" edge="1" parent="1" source="visit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="recv" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="745" y="589" />
-              <mxPoint x="990" y="589" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_risk__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s" target="open">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_8" edge="1" parent="1" source="come" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.543;exitY=1.057;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" target="itv" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1216" y="766" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_risk__f_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="open" target="query">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_9" edge="1" parent="1" source="recv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="itv" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="990" y="709" />
-              <mxPoint x="745" y="709" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_risk__f_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="query" target="b1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_10" edge="1" parent="1" source="itv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="up" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="745" y="829" />
-              <mxPoint x="285" y="829" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_risk__f_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b1" target="x1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_11" edge="1" parent="1" source="up" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="stt" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_risk__f_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b3" target="b4">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_12" edge="1" parent="1" source="stt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="fix" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_risk__f_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b4" target="b5">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_13" edge="1" parent="1" source="fix" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="gen" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_risk__f_7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b5" target="b6">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_14" edge="1" parent="1" source="gen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="plan" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_ai__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a0" target="gw1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_15" edge="1" parent="1" source="plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="rev" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="515" y="1126" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_ai__f_2" value="觀護人出訪" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw1" target="visit">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_16" edge="1" parent="1" source="rev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="gw2" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="285" y="1196" />
-              <mxPoint x="745" y="1196" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_ai__f_3" value="被觀護人到地檢" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw1" target="itv">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="764" y="766"/><mxPoint x="764" y="1006"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_17" edge="1" parent="1" source="gw2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="edit" value="否">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="846" y="1246" />
-              <mxPoint x="846" y="1486" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_ai__f_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="visit" target="itv">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_18" edge="1" parent="1" source="gw2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#cc0000;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="wb" value="是">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="745" y="1309" />
-              <mxPoint x="285" y="1309" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_ai__f_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="itv" target="up">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_19" edge="1" parent="1" source="edit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="rev" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="184" y="1486" />
-              <mxPoint x="184" y="1126" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_ai__f_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="up" target="a2">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_20" edge="1" parent="1" source="wb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#cc0000;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="sync" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_ai__f_7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a2" target="a3">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__f_21" edge="1" parent="1" source="sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="e" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_ai__f_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a3" target="a4">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__as_1" edge="1" parent="1" source="itv" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="rec" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_ai__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a4" target="a5">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__as_2" edge="1" parent="1" source="gen" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="doc" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_ai__f_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a5" target="rev">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__as_3" edge="1" parent="1" source="plan" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="pdoc" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_pool_ai__f_11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rev" target="gw2">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_531ec1__as_4" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.588;exitY=0.0;exitDx=0;exitDy=0;entryX=0.589;entryY=1.0;entryDx=0;entryDy=0;" target="plan" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1104" y="1064" />
-              <mxPoint x="529" y="1064" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_pool_ai__f_12" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw2" target="edit">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1095" y="1846"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="dio_pool_ai__f_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="edit" target="rev">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="764" y="1966"/><mxPoint x="764" y="1726"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="dio_pool_ai__f_14" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw2" target="a8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_pool_ai__f_15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a8" target="a9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_mf_1" value="個案資料" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#6b7b8b;fontColor=#52606d;labelBackgroundColor=#ffffff;fontSize=11;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="x1" target="a0">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="632" y="646"/><mxPoint x="632" y="646"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="dio_mf_1__env" value="" style="shape=message;html=1;fillColor=#ffffff;strokeColor=#6b7b8b;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="695" y="630" width="16" height="11" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_mf_2" value="個案報告資料" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=oval;startFill=0;startSize=6;endArrow=open;endFill=0;strokeColor=#6b7b8b;fontColor=#52606d;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9" target="b3">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="632" y="2206"/><mxPoint x="632" y="2206"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="dio_mf_2__env" value="" style="shape=message;html=1;fillColor=#ffffff;strokeColor=#6b7b8b;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="684" y="2190" width="16" height="11" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_pool_ai__as_1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="itv" target="rec">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_pool_ai__as_2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a4" target="doc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_pool_ai__as_3" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a5" target="pdoc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dio_pool_ai__as_4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=0.588;exitY=0.0;exitDx=0;exitDy=0;entryX=0.589;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n1" target="a5">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1109" y="1668"/><mxPoint x="879" y="1668"/></Array></mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="d2" name="約談輔導紀要與訪視報告現行工作流程圖(未導入AI)">
-    <mxGraphModel grid="1" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="dio_title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" value="約談輔導紀要與訪視報告現行工作流程圖(未導入AI) V03.01" vertex="1">
-          <mxGeometry height="28" width="590" x="140" y="22" as="geometry" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="dio_title" value="約談輔導紀要與訪視報告現行工作流程圖(未導入AI) V04.01" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=19;fontColor=#1f2d3d;" vertex="1" parent="1">
+          <mxGeometry x="140" y="22" width="590" height="28" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pool_0" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="1116" width="950" x="140" y="70" as="geometry" />
+        <mxCell id="dio_pool_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#3a4a59;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="140" y="70" width="950" height="1116" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_pooltitle_0" parent="1" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" value="約談輔導紀要與訪視報告現行工作流程圖(未導入AI)" vertex="1">
-          <mxGeometry height="1116" width="30" x="140" y="70" as="geometry" />
+        <mxCell id="dio_pooltitle_0" value="約談輔導紀要與訪視報告現行工作流程圖(未導入AI)" style="text;html=1;horizontal=0;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#1f2d3d;" vertex="1" parent="1">
+          <mxGeometry x="140" y="70" width="30" height="1116" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_hdrline_0" parent="1" style="rounded=0;html=1;fillColor=#8a99a8;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="1" width="920" x="170" y="106" as="geometry" />
+        <mxCell id="dio_hdrline_0" value="" style="rounded=0;html=1;fillColor=#8a99a8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="106" width="920" height="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lane_0_0" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" value="" vertex="1">
-          <mxGeometry height="1116" width="460" x="170" y="70" as="geometry" />
+        <mxCell id="dio_lane_0_0" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
+          <mxGeometry x="170" y="70" width="460" height="1116" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_0_0" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" value="觀護人" vertex="1">
-          <mxGeometry height="36" width="460" x="170" y="70" as="geometry" />
+        <mxCell id="dio_lanehdr_0_0" value="觀護人" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+          <mxGeometry x="170" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lane_0_1" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" value="" vertex="1">
-          <mxGeometry height="1116" width="460" x="630" y="70" as="geometry" />
+        <mxCell id="dio_lane_0_1" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#8a99a8;" vertex="1" parent="1">
+          <mxGeometry x="630" y="70" width="460" height="1116" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_lanehdr_0_1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" value="被觀護人" vertex="1">
-          <mxGeometry height="36" width="460" x="630" y="70" as="geometry" />
+        <mxCell id="dio_lanehdr_0_1" value="被觀護人" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#3a4a59;" vertex="1" parent="1">
+          <mxGeometry x="630" y="70" width="460" height="36" as="geometry"/>
         </mxCell>
-        <mxCell id="c_s" parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" value="開始" vertex="1">
-          <mxGeometry height="38" width="38" x="266" y="147" as="geometry" />
+        <mxCell id="c_s" value="開始" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="266" y="147" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="c_open" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="開啟觀護案件管理作業系統&#xa;查詢個案資料" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="253" as="geometry" />
+        <mxCell id="c_open" value="開啟觀護案件管理作業系統&#xa;查詢個案資料" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="206" y="253" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_gw1" parent="1" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="訪談方式" vertex="1">
-          <mxGeometry height="52" width="52" x="259" y="380" as="geometry" />
+        <mxCell id="c_gw1" value="訪談方式" style="shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="259" y="380" width="52" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="c_come" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" value="至地檢接受約談" vertex="1">
-          <mxGeometry height="66" width="158" x="781" y="613" as="geometry" />
+        <mxCell id="c_come" value="至地檢接受約談" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="781" y="613" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_visit" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="出訪至被觀護人所在地" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="493" as="geometry" />
+        <mxCell id="c_visit" value="出訪至被觀護人所在地" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="206" y="493" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_recv" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" value="於所在地接受訪視" vertex="1">
-          <mxGeometry height="66" width="158" x="781" y="493" as="geometry" />
+        <mxCell id="c_recv" value="於所在地接受訪視" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=abstract;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="781" y="493" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_itv" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="進行訪談(現行不錄音)" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="613" as="geometry" />
+        <mxCell id="c_itv" value="進行訪談(現行不錄音)" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="206" y="613" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_log" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="於受保護管束人再犯風險評估&#xa;智慧輔助系統登打約談輔導紀要&#xa;或訪視報告" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="733" as="geometry" />
+        <mxCell id="c_log" value="於受保護管束人再犯風險評估&#xa;智慧輔助系統登打約談輔導紀要&#xa;或訪視報告" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="206" y="733" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_doc" parent="1" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" value="約談輔導紀要/&#xa;訪視報告" vertex="1">
-          <mxGeometry height="52" width="42" x="494" y="740" as="geometry" />
+        <mxCell id="c_doc" value="約談輔導紀要/&#xa;訪視報告" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="494" y="740" width="42" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="c_plan" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" value="於受保護管束人再犯風險評估&#xa;智慧輔助系統建立處遇建議" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="853" as="geometry" />
+        <mxCell id="c_plan" value="於受保護管束人再犯風險評估&#xa;智慧輔助系統建立處遇建議" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=user;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="206" y="853" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_pdoc" parent="1" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" value="處遇建議" vertex="1">
-          <mxGeometry height="52" width="42" x="494" y="860" as="geometry" />
+        <mxCell id="c_pdoc" value="處遇建議" style="shape=mxgraph.bpmn.data2;html=1;labelPosition=center;fontSize=11;verticalLabelPosition=bottom;align=center;verticalAlign=top;size=15;bpmnTransferType=output;fillColor=#ffffff;strokeColor=#5a6b7b;" vertex="1" parent="1">
+          <mxGeometry x="494" y="860" width="42" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="c_sync" parent="1" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="自動回存至&#xa;觀護案件管理作業系統" vertex="1">
-          <mxGeometry height="66" width="158" x="206" y="973" as="geometry" />
+        <mxCell id="c_sync" value="自動回存至&#xa;觀護案件管理作業系統" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=0;expand=0;collapsible=0;fontColor=#1f2d3d;taskMarker=service;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="206" y="973" width="158" height="66" as="geometry"/>
         </mxCell>
-        <mxCell id="c_e" parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" value="結束本次訪談" vertex="1">
-          <mxGeometry height="38" width="38" x="266" y="1107" as="geometry" />
+        <mxCell id="c_e" value="結束本次訪談" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;fontSize=11;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3.2;" vertex="1" parent="1">
+          <mxGeometry x="266" y="1107" width="38" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_1" edge="1" parent="1" source="c_s" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_open" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_s" target="c_open">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_2" edge="1" parent="1" source="c_open" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_gw1" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_open" target="c_gw1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_3" edge="1" parent="1" source="c_gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="c_come" value="被觀護人到地檢">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="979" y="406" />
-              <mxPoint x="979" y="646" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_id_2bf045__f_3" value="被觀護人到地檢" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_gw1" target="c_come">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="979" y="406"/><mxPoint x="979" y="646"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_4" edge="1" parent="1" source="c_gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_visit" value="觀護人出訪">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_4" value="觀護人出訪" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_gw1" target="c_visit">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_5" edge="1" parent="1" source="c_visit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="c_recv" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_visit" target="c_recv">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_6" edge="1" parent="1" source="c_come" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" target="c_itv" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_come" target="c_itv">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_7" edge="1" parent="1" source="c_recv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_itv" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="860" y="589" />
-              <mxPoint x="285" y="589" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="dio_id_2bf045__f_7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_recv" target="c_itv">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="860" y="589"/><mxPoint x="285" y="589"/></Array></mxGeometry>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_8" edge="1" parent="1" source="c_itv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_log" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_itv" target="c_log">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_9" edge="1" parent="1" source="c_log" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_plan" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_log" target="c_plan">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_10" edge="1" parent="1" source="c_plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_sync" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_plan" target="c_sync">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__f_11" edge="1" parent="1" source="c_sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" target="c_e" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__f_11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3a4a59;endArrow=block;endFill=1;startArrow=none;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;fontSize=12;fontColor=#b0451f;fontStyle=1;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_sync" target="c_e">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__as_1" edge="1" parent="1" source="c_log" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="c_doc" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__as_1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_log" target="c_doc">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="dio_id_2bf045__as_2" edge="1" parent="1" source="c_plan" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" target="c_pdoc" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dio_id_2bf045__as_2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=1 4;endArrow=none;startArrow=none;strokeColor=#8a99a8;fontSize=11;jumpStyle=arc;jumpSize=10;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_plan" target="c_pdoc">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
